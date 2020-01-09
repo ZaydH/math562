@@ -1,5 +1,5 @@
 \begin{problem}
-  A random sample of size~$n$ is taken from the pdf
+  (\textnormal{Problem~5.2.12}) A random sample of size~$n$ is taken from the pdf
 
   \begin{equation}\label{eq:P06}
     f_{Y}(y;\theta) = \frac{2y}{\theta^2}, \hspace{0.1cm} 0 \leq y \leq \theta\text{.}
@@ -7,3 +7,21 @@
   Find an expression for~$\hat{\theta}$, the maximum likelihood estimator for~$\theta$.
 \end{problem}
 
+Given some sample~${Y_1,\ldots,Y_n}$, the likelihood is
+
+\begin{equation}\label{eq:P06:Likelihood}
+  L_n(\theta) = \begin{cases}
+    \frac{2^n \prod_{i=1}^n y_i}{\theta^{2n}} & 0 \leq y \leq \max\set{Y_1,\ldots,Y_n} \\
+                  0 & \text{Otherwise}\text{.}
+                \end{cases}
+\end{equation}
+
+\noindent
+For that fixed sample, the likelihood is maximized when the denominator is minimized.  This occurs when ${\theta = \pm\max\set{Y_1,\ldots,Y_n}}$.  Since the preimage is constrained by ${0 \leq y \leq \theta}$, $\theta$ cannot be negative.  Therefore, $\boxed{{\hat{\theta} = \max\set{Y_1,\ldots,Y_n}}}$
+
+% \noindent
+% The log likelihood is
+
+% \begin{equation}\label{eq:P06:LogLikelihood}
+%   \ell_n(\theta) = n \ln 2 + \sum_{i=1}^n \left( \ln y_i \right) - 2n \ln\theta \text{.}
+% \end{equation}
