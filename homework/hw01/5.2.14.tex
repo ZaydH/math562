@@ -13,3 +13,42 @@
   \noindent
   find the maximum likelihood estimator for~$p$ if~$r$ is known.
 \end{problem}
+
+For some sample~${K_1,\ldots,K_n}$, the likelihood is
+
+\begin{equation}\label{eq:P07:Likelihood}
+  L_n(p) = \left(\left(1-p\right)^{\sum_{i=1}^n k_i}\right) \left(p^{nr}\right) \prod_{i=1}^{n} \left(%
+                                                                            \begin{array}{c}
+                                                                              k_i + r - 1 \\
+                                                                              k_i
+                                                                            \end{array}
+                                                                     \right)\text{.}
+\end{equation}
+
+\noindent
+The log likelihood is:
+
+\begin{equation}
+  \ell_n(p) = \left(\sum_{i=1}^{n} k_i\right) \ln(1 - p) + (rn) \ln (p) + \sum_{i=1}^{n} \ln \left(%
+                                                                                                 \begin{array}{c}
+                                                                                                   k_i + r - 1 \\
+                                                                                                   k_i
+                                                                                                 \end{array}
+                                                                                               \right)\text{.}
+\end{equation}
+
+\noindent
+The derivative of the log likelihood is
+
+\begin{equation}
+  \ell'_n(p) = -\frac{\sum_{i=1}^{n} k_i}{1-p} + \frac{rn}{p} \text{.}
+\end{equation}
+
+\noindent
+The maximum likelihood estimator is
+
+\begin{align}
+  0 &= -\frac{\sum_{i=1}^{n} k_i}{1-\hat{p}} + \frac{rn}{\hat{p}} \\
+    &= -\left(\sum_{i=1}^{n} k_i\right) \hat{p} + \left(rn\right)(1-\hat{p})\\
+  \hat{p} &= \boxed{\frac{rn}{rn + \sum_{i=1}^{n} k_i }}\text{.}
+\end{align}
