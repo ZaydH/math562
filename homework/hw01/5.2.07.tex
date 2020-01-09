@@ -1,0 +1,39 @@
+\begin{problem}
+  (\textnormal{Problem~5.2.7}) An engineer is creating a project schedule program and recognizes that the tasks making up the project are not always completed o time.  However, the completion proportion tends to be fairly high.  However, the completion proportion tends to be fairly high.  To reflect this condition, he uses the pdf
+
+  \begin{equation}\label{eq:P04}
+    f_{Y}(y;\theta)=\theta y^{\theta - 1}, \hspace{0.1cm} 0 \leq y \leq 1, \hspace{0.1cm} 0 < \theta
+  \end{equation}
+
+  \noindent
+  where $y$~is the proportion of the task completed.  Suppose that in his previous project, the proportions of tasks completed were~0.77, 0.82, 0.92, 0.94, and~0.98.  Estimate~$\theta$.
+\end{problem}
+
+For a set of~$n$ proportions, the likelihood is
+
+\begin{equation}\label{eq:P04:Likelihood}
+  L_{n}(\theta) = \theta^{n} \prod_{i=1}^{n} y_{i}^{\theta - 1} \text{.}
+\end{equation}
+
+\noindent
+The log likelihood is
+
+\begin{equation}\label{eq:P04:LogLikelihood}
+  \ell_{n}(\theta) = n\ln(\theta) + (\theta - 1) \sum_{i=1}^{n} \ln y_i \text{.}
+\end{equation}
+
+\noindent
+The derivative of the log likelihood is:
+
+\begin{equation}\label{eq:P04:LogLikelihood:Deriv}
+  \ell_{n}'(\theta) = \frac{n}{\theta} + \sum_{i=1}^{n} \ln y_i \text{.}
+\end{equation}
+
+\noindent
+Setting this to zero yields
+
+\begin{align}
+  \frac{n}{\theta} &= \sum_{i=1}^{n} \ln\left(\frac{1}{y} \right) \\
+  \theta &= \frac{n}{\sum_{i=1}^{n} 1 / y_i} \\
+         &\approx \boxed{7.996} \text{.}
+\end{align}
