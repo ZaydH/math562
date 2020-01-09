@@ -1,0 +1,19 @@
+\begin{problem}
+  (\textnormal{Problem~5.2.2}) The number of red chips and white chips in an urn is unknown, but the \textit{proportion},~$p$, of reds is either~$\frac{1}{3}$ or~$\frac{1}{2}$. A sample size of~5, drawn with replacement, yields the sequence red, white, white, red, and white.  What is the maximum likelihood estimate for~$p$?
+\end{problem}
+
+If ${p=\frac{1}{3}}$, then the sample's likelihood is:
+
+\begin{equation}\label{eq:P01:1s3Likelihood}
+  L\left(\frac{1}{3}\right) = \left(\frac{1}{3}\right)^2 \left( \frac{2}{3} \right)^{3} = \frac{8}{243} \approx 0.0329\text{.}
+\end{equation}
+
+\noindent
+If ${p=\frac{1}{2}}$, then the sample's likelihood is:
+
+\begin{equation}\label{eq:P01:1s2Likelihood}
+  L\left(\frac{1}{2}\right) = \left(\frac{1}{2}\right)^2 \left( \frac{1}{2} \right)^{3} = \frac{1}{32} \approx 0.0313\text{.}
+\end{equation}
+
+\noindent
+Since ${0.0329 > 0.0313}$, the maximum likelihood estimate of~$p$ is~$\frac{1}{3}$.

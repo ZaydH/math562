@@ -1,0 +1,38 @@
+\begin{problem}
+  (\textnormal{Problem 5.2.4}) Suppose a random sample of size~$n$ is drawn from the probability model
+
+  \begin{equation}\label{eq:P03:Distr}
+    p_{X}(k;\theta) = \frac{\theta^{2k} e^{-\theta^2}}{k!}, \hspace{0.1cm}k=0,1,2,\ldots
+  \end{equation}
+
+  \noindent
+  Find a formula for the maximum likelihood estimator,~$\hat{\theta}$.
+\end{problem}
+
+For an i.i.d.\ sample of size~$n$, the likelihood is:
+
+\begin{equation}\label{eq:P03:Likelihood}
+  L_{n}(\theta) = \frac{e^{-n\theta^{2}} \theta^{\left(2\sum_{i=1}^{n} k_i\right)}}{\prod_{i=1}^{n} k_i !}\text{.}
+\end{equation}
+
+\noindent
+The log likelihood is
+
+\begin{equation}\label{eq:P03:LogLikelihood}
+  \ln\left(L_{n}(\theta)\right) = -n\theta^{2} + {\left(2\sum_{i=1}^{n} k_i\right)} \ln\left(\theta\right) - \sum_{i=1}^{n} \ln\left(k_{i}!\right) \text{.}
+\end{equation}
+
+\noindent
+Taking the derivative with respect to~$\theta$ yields:
+
+\begin{equation}\label{eq:P03:LogLikelihood:Deriv}
+  \ell'(\theta) = -2n\theta + \frac{2\sum_{i=1}^{n} k_i}{\theta}\text{.}
+\end{equation}
+
+\noindent
+Setting equal to zero yields:
+
+\begin{align}
+  \hat{\theta}^{2} &= \frac{\sum_{i=1}^{n} k_i}{n} \\
+  \hat{\theta} &= \pm \sqrt{\frac{\sum_{i=1}^{n} k_i}{n}} \text{.}
+\end{align}

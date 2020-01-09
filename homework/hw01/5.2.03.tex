@@ -1,0 +1,35 @@
+\begin{problem}
+  (\textnormal{Problem~5.2.3}) Use the sample~${Y_1 = 8.2}$, ${Y_2 = 9.1}$, ${Y_3 = 10.6}$, and~${Y_4 = 4.9}$ to calculate the maximum likelihood estimate for~$\lambda$ in the exponential pdf:
+
+  \begin{equation}\label{eq:P02:Exponential}
+    f_{Y}(y;\lambda) = \lambda e^{-\lambda y}, \hspace{0.1cm} y \geq 0 \text{.}
+  \end{equation}
+\end{problem}
+
+Given some vector~$\vec{Y}$ of dimension~$n$, the likelihood is
+
+\begin{equation}\label{eq:P02:Likelihood}
+  L_{n}(\lambda) = \lambda^{n}\exp\left(-\lambda\sum_{i=1}^{n} y_{i}\right)\text{.}
+\end{equation}
+
+\noindent
+The log likelihood of the aforementioned sequence is
+
+\begin{equation}\label{eq:P02:LogLikelihood}
+  \ell(\lambda) = \ln\left(L(\lambda)\right) = n\ln(\lambda) - \lambda \sum_{i=1}^{n} y_i\text{.}
+\end{equation}
+
+\noindent
+Its derivative is:
+
+\begin{equation}\label{eq:P02:LogLikelihood:Derivative}
+  \ell'(\lambda) = \frac{4}{\lambda} - \sum_{i=1}^{4} y_i = \frac{4}{\lambda} - 32.8  \text{.}
+\end{equation}
+
+\noindent
+Setting the above equal to zero, we see that maximum likelihood estimate is
+
+\begin{align}
+  \frac{4}{\lambda_{\text{e}}} - 32.8 &= 0 \\
+  \lambda_{\text{e}} &= 8.2 \text{.}
+\end{align}
