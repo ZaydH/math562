@@ -1,0 +1,38 @@
+\begin{problem}
+  (\textnormal{5.2.10})
+\end{problem}
+
+\begin{subproblem}\label{P05:A}
+  Based on the random sample ${Y_1=6.3}$, ${Y_2 = 1.8}$, ${Y_3 = 14.2}$, and ${Y_4 = 7.6}$, use the method of maximum likelihood to estimate the parameter~$\theta$ in the uniform pdf
+
+  \begin{equation}
+    f_{Y}(y;\theta) = \frac{1}{\theta}, \hspace{0.1cm} 0 \leq y \leq \theta \text{.}
+  \end{equation}
+\end{subproblem}
+
+This is the same as the example done in class on January~8, 2020 where ${\hat{\theta} = \max\set{Y_1,\ldots,Y_{n}}}$.  Therefore, $\boxed{{\hat{\theta} = 14.2}}$.
+
+\begin{subproblem}
+  Suppose the random sample in part~$(\ref{P05:A})$ represents the two parameter uniform pdf
+
+  \begin{equation}\label{eq:P05:b}
+    f_{Y}(y;\theta_1,\theta_2) = \frac{1}{\theta_2 - \theta_1}, \hspace{0.1cm} \theta_{1} \leq y \leq \theta_{2} \text{.}
+  \end{equation}
+
+  \noindent
+  Find the maximum likelihood estimates for~$\theta_1$ and~$\theta_{2}$.
+\end{subproblem}
+
+Similar to part~(\ref{P05:A}), the likelihood for an $n$\-/dimensional sample is
+
+\begin{equation}
+  L_{n}(\theta_{1},\theta_{2}) =  \begin{cases}
+                                    \frac{1}{(\theta_{2} - \theta_{1})^{n}} & \theta_{1} \leq \min\set{Y_1,\ldots,Y_n} \wedge \max\set{Y_1,\ldots,Y_n} \\
+                                    0 & \text{Otherwise}
+                                  \end{cases}\text{.}
+\end{equation}
+
+\noindent
+For a fixed ${\theta_{1} \leq \min\set{Y_{1},\ldots,Y_{n}}}$, the value of~$\theta_{2}$ that maximizes the likelihood is exactly~${\max\set{Y_1,\ldots,Y_n}}$ (since it keeps the denominator as small as possible).  Similarly, the denominator is minimized when ${\theta_{1} = \min\set{Y_{1},\ldots,Y_{n}}}$ exactly for fixed~${\theta_{2} \geq \max\set{Y_{1},\ldots,Y_{n}}}$.
+
+Given the above, the MLE is $\boxed{{\hat{\theta}_{1}=1.8}}$ and $\boxed{{\hat{\theta}_{2} = 14.2}}$.
