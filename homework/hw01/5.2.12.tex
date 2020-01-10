@@ -11,7 +11,7 @@ Given some sample~${Y_1,\ldots,Y_n}$, the likelihood is
 
 \begin{equation}\label{eq:P06:Likelihood}
   L_n(\theta) = \begin{cases}
-    \frac{2^n \prod_{i=1}^n y_i}{\theta^{2n}} & 0 \leq y \leq \max\set{Y_1,\ldots,Y_n} \\
+    \frac{2^n \prod_{i=1}^n y_i}{\theta^{2n}} & \theta \geq \max\set{Y_1,\ldots,Y_n} \\
                   0 & \text{Otherwise}\text{.}
                 \end{cases}
 \end{equation}
