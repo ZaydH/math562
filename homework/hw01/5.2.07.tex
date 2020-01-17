@@ -1,5 +1,5 @@
 \begin{problem}
-  (\textnormal{Problem~5.2.7}) An engineer is creating a project schedule program and recognizes that the tasks making up the project are not always completed o time.  However, the completion proportion tends to be fairly high.  However, the completion proportion tends to be fairly high.  To reflect this condition, he uses the pdf
+  (\textnormal{Problem~5.2.7}) An engineer is creating a project schedule program and recognizes that the tasks making up the project are not always completed on time.  However, the completion proportion tends to be fairly high.  To reflect this condition, he uses the pdf
 
   \begin{equation}\label{eq:P04}
     f_{Y}(y;\theta)=\theta y^{\theta - 1}, \hspace{0.1cm} 0 \leq y \leq 1, \hspace{0.1cm} 0 < \theta
@@ -23,7 +23,7 @@ The log likelihood is
 \end{equation}
 
 \noindent
-The derivative of the log likelihood is:
+The log likelihood's derivative is:
 
 \begin{equation}\label{eq:P04:LogLikelihood:Deriv}
   \ell_{n}'(\theta) = \frac{n}{\theta} + \sum_{i=1}^{n} \ln y_i \text{.}
@@ -33,7 +33,7 @@ The derivative of the log likelihood is:
 Setting this to zero yields
 
 \begin{align}
-  \frac{n}{\theta} &= \sum_{i=1}^{n} \ln\left(\frac{1}{y} \right) \\
+  \frac{n}{\theta} &= \sum_{i=1}^{n} \ln\left(\frac{1}{y_i} \right) \\
   \theta &= \frac{n}{\sum_{i=1}^{n} 1 / y_i} \\
          &\approx \boxed{7.996} \text{.}
 \end{align}
