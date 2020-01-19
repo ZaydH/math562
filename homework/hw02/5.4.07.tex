@@ -1,0 +1,28 @@
+\begin{problem}
+  \probNum{5.4.7} Let $Y$ be the random variable described in Example 5.2.4, where ${f_{Y} (y; \theta) = e^{-(y-\theta)}\text{, }y \geq \theta\text{, }\theta > 0}$. Show that ${Y_{\min} - \frac{1}{n}}$ is an unbiased estimator of~$\theta$.
+\end{problem}
+
+Given
+
+\begin{equation}
+  f_{Y_{\min}}(y) = n f_Y(y) (1 - F_Y(y))^{n-1}\text{,}
+\end{equation}
+
+\noindent
+makes the pdf for this problem
+
+\begin{align*}
+  f_{Y_{\min}}(y) &= n\exp\left((-(y-\theta)\right) \exp\left(-(y-\theta)\right)^{n-1} \\
+                  &= n \exp\left(-n(y-\theta)\right)^{n}
+\end{align*}
+
+The expected value~$Y_{\min}$ is
+
+\begin{align*}
+  \expect{Y_{\min}} &= \int y f_{Y_{\min}}(y) dy \\
+                    &= -\frac{y}{\exp\left(n(y-\theta)\right)} - \frac{\exp\left(-n(y-\theta)\right)}{n} \bigg\vert_{\theta}^{\infty} & \text{Integration by parts} \\
+                    &= \theta + \frac{1}{n} & \text{L'Hopital's Rule} \text{.}
+\end{align*}
+
+\noindent
+Therefore, $\boxed{Y_{\min} - \frac{1}{n}}$ is an unbiased estimator for~$\theta$.
