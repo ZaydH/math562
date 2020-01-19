@@ -1,0 +1,11 @@
+\begin{problem}
+  \probNum{5.3.12} During one of the first ``beer wars'' in the early 1980s, a taste test between Schlitz and Budweiser was the focus of a nationally broadcast TV commercial. One hundred people agreed to drink from two unmarked mugs and indicate which of the two beers they liked better; fifty-four said, ``Bud.'' Construct and interpret the corresponding 95\%~confidence interval for~$p$, the true proportion of beer drinkers who preferred Budweiser to Schlitz. How would Budweiser and Schlitz executives each have put these results in the best possible light for their respective companies?
+\end{problem}
+
+The mean value is ${\bar{p}=0.54}$.  The Bernoulli variance is ${\sigma^2 = p(1-p)}$.  Using the sample proportion we get the approximate sigma is: ${\hat{\sigma} \approx 0.50}$.  The 95\%~confidence interval is
+
+\begin{equation*}
+  \bar{x} \pm 1.96 * \frac{\sigma}{\sqrt{n}} \approx 0.54 \pm 1.96 * 0.05 \approx 0.54 \pm 0.098 \text{.}
+\end{equation*}
+
+If I worked for Budweiser marketing, I would say my beer was preferred in a nationwide taste test (essentially just reporting $\bar{x}$).  If I worked for Schlitz, I would say its flavor is as popular as Budweiser's since 50\% is within the confidence interval.
