@@ -1,0 +1,33 @@
+\begin{problem}
+  \probNum{5.2.25} Use the method of moments to derive estimates for the parameters~$r$ and~$\lambda$ in the gamma pdf:
+
+  \begin{equation}
+    f_{Y}(y;r,\lambda) = \frac{\lambda^{r}}{\Gamma(r)} y^{r-1} e^{-\lambda y}\text{,} \hspace{0.5cm}y \geq 0
+  \end{equation}
+\end{problem}
+
+% \begin{align*}
+%   \sum_{i=1}^{n} y_i = \bar{y} &= \int \frac{\lambda^{r}}{\Gamma(r)} y^{r} e^{-\lambda y}\\
+%                                &= \frac{\lambda^{r}}{\Gamma(r)} \left(  \right) \bigg\vert_{0}^{\infty}
+% \end{align*}
+
+The mean and variance of the gamma distribution as formulated above are~$\frac{r}{\lambda}$ and~$\frac{r}{\lambda^2}$ respectively.  Therefore,
+
+\begin{align*}
+  \sum_{i=1}^{n} y_i = \bar{y}_1 &= \frac{r}{\lambda} \\
+                         \lambda &= \frac{r}{\bar{y}_{1}}
+\end{align*}
+
+\begin{align*}
+  \sum_{i=1}^{n} y_{i}^{2} = \bar{y}_2  &= \frac{r}{\lambda^{2}} + \frac{r^2}{\lambda^2} \\
+                                        &= \frac{r\bar{y}_{1}^2}{r^2} + \frac{r^2\bar{y}_{1}^2}{r^2} \\
+                                        &= \frac{\bar{y}_{1}^2}{r} + \bar{y}_{1}^2
+\end{align*}
+
+\begin{equation}
+  r = \boxed{\frac{\bar{y}_{1}^{2}}{\bar{y}_{2} - \bar{y}_{1}^{2}}}
+\end{equation}
+
+\begin{equation*}
+  \lambda = \boxed{\frac{\bar{y}_{1}}{\bar{y}_{2} - \bar{y}_{1}^{2}}}
+\end{equation*}

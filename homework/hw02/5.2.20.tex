@@ -1,0 +1,12 @@
+\begin{problem}
+  \probNum{5.2.20} Find the method of moments estimate for~$\lambda$ if a random sample of size~$n$ is taken from the exponential~pdf, ${f_Y(y;\lambda) = \lambda \exp(-\lambda y), y \geq 0}$.
+\end{problem}
+
+\begin{align*}
+  \sum_{i=1}^{n} y_i = \bar{y} &= \expectS{Y}{f(y)} \\
+                               &= \int \lambda y \exp\left( -\lambda y  \right) dy \\
+                               &= \lambda \left(-\frac{y}{\lambda} - \frac{1}{\lambda^2}\right) \exp\left(-\lambda y\right) \bigg\vert_{0}^{\infty} \\
+                               &= \frac{1}{\lambda}
+\end{align*}
+
+Therefore, ${\lambda = \boxed{\frac{1}{\lambda}}}$.
