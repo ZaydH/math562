@@ -10,7 +10,7 @@
 \end{problem}
 
 \begin{align*}
-  \sum_{i=1}^{n} y_i = \bar{y} &= \expectS{Y}{f(y;\theta)} \\
+  \frac{1}{n} \sum_{i=1}^{n} y_i = \bar{y} &= \expectS{Y}{f(y;\theta)} \\
                      &= \int  y(\theta^{2} + \theta) y^{\theta - 1} (1 - y) dy \\
                      &= (\theta^{2} + \theta) \int y^{\theta} - y^{\theta + 1} dy \\
                      &= (\theta^{2} + \theta) \left( \frac{y^{\theta + 1}}{\theta + 1} -\frac{y^{\theta + 2}}{\theta + 2} \right)\bigg\vert_{0}^{1} \\
