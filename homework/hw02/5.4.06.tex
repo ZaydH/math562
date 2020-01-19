@@ -1,0 +1,39 @@
+\begin{problem}
+  \probNum{5.4.6} Let $Y_{\min}$ be the smallest order statistic in a random sample of size~$n$ drawn from the uniform pdf,
+  \begin{equation*}
+    f_Y(y;\theta) = frac{1}{\theta}\text{, } 0 \leq y \leq \theta \text{, } \theta >0\text{.}
+  \end{equation*}
+
+  Find an unbiased estimator for~$\theta$ based on~$Y_{\min}$.
+\end{problem}
+
+Given
+
+\begin{equation}
+  f_{Y_{\min}}(y) = n f_Y(y) (1 - F_Y(y))^{n-1}\text{,}
+\end{equation}
+
+\noindent
+makes the pdf for this problem
+
+\begin{equation}
+  f_{Y_{\min}}(y) = \frac{n}{\theta} \left(1 - \frac{y}{\theta} \right)^{n-1}\text{.}
+\end{equation}
+
+Recall integration by parts specifies that
+
+\begin{equation}
+  \int uv dx = u\int v dx - \int u' \left( \int v dx \right) dx \text{.}
+\end{equation}
+
+\noindent
+The expected value of $Y_{\min}$ is:
+
+\begin{align*}
+  \expect{Y_{\min}} &= \int y f_{Y_{\min}}(y) dy \\
+                    &= y\int f_{Y_{\min}}(y) dy - \int \int f_{Y_{\min}}(y) dy dy \\
+                    &= -y\left(1 - \frac{y}{\theta}\right)^{n}- \frac{\theta \left(1 - \frac{y}{\theta}\right)^{n+1}}{n+1} \bigg\vert_{0}^{\theta} \\
+                    &= \frac{\theta}{n+1}\text{.}
+ \end{align*}
+
+ Therefore, $\boxed{(n+1)Y_{\min}}$ is an unbiased estimator of~$\theta$.

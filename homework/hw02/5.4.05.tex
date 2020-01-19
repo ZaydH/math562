@@ -1,3 +1,14 @@
 \begin{problem}
-  \probNum{5.4.5} Suppose $X_1,X_2,\ldots,X_n$ is a random sample of size~$n$ drawn from a Poisson pdf where $\lambda$ is an unknown parameter. Show that ${\hat{\lambda} = X}$ is unbiased for~$\lambda$. For what type of parameter, in general, will the sample mean necessarily be an unbiased estimator? (Hint: The answer is implicit in the derivation showing that $X$ is unbiased for the Poisson~$\lambda$.)
+  \probNum{5.4.5} Suppose $X_1,X_2,\ldots,X_n$ is a random sample of size~$n$ drawn from a Poisson pdf where $\lambda$ is an unknown parameter. Show that ${\hat{\lambda} = \bar{X}}$ is unbiased for~$\lambda$. For what type of parameter, in general, will the sample mean necessarily be an unbiased estimator? (Hint: The answer is implicit in the derivation showing that $X$ is unbiased for the Poisson~$\lambda$.)
 \end{problem}
+
+If ${\hat{\lambda} = \bar{X}}$ is an unbiased estimator of $\lambda$, it suffices to show that ${\expect{\hat{\lambda}} = \lambda}$.
+
+\begin{align*}
+  \expect{\hat{\lambda}} &= \expect{\bar{X}} \\
+                         &= \frac{1}{n} \sum_{i=1}^{n} \expect{X_i} \\
+                         &= \frac{1}{n} \sum_{i=1}^{n} \lambda & \text{Given for Poisson} \\
+                         &= \lambda
+\end{align*}
+
+The sample mean is an unbiased estimator of any parameter that equals the sample mean itself.
