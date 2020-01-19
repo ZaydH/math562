@@ -1,0 +1,5 @@
+\begin{problem}
+  \probNum{5.4.3} Five hundred adults are asked whether they favor a bipartisan campaign finance reform bill. If the true pro- portion of the electorate is 52\%~in favor of the legislation, what are the chances that fewer than half of those in the sample support the proposal? Use a Z transformation to approximate the answer.
+\end{problem}
+
+Given ${p=0.52}$, the standard deviation can be estimated as ${\sqrt{0.52 \cdot 0.48} \approx 0.50}$.  Normalizing for sample size yields a confidence width of ${\pm z * \frac{0.5}{\sqrt{500}} \approx \pm 0.023}$.  For a 2\%~shift, ${z=-0.894}$.  Linearly interpolating from the $Z$~transformation table, the probability the sample is less than~50\% is approximately~$\boxed{0.1851}$.
