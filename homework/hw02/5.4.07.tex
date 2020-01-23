@@ -5,14 +5,14 @@
 Given
 
 \begin{equation}
-  f_{Y_{\min}}(y) = n f_Y(y) (1 - F_Y(y))^{n-1}\text{,}
+  f_{Y_{\min}}(y) = n f_{Y}(y) (1 - F_{Y}(y))^{n-1}\text{,}
 \end{equation}
 
 \noindent
 makes the pdf for this problem
 
 \begin{align*}
-  f_{Y_{\min}}(y) &= n\exp\left((-(y-\theta)\right) \exp\left(-(y-\theta)\right)^{n-1} \\
+  f_{Y_{\min}}(y) &= n\exp\left(-(y-\theta)\right) \bigg(\exp\left(-(y-\theta)\right)\bigg)^{n-1} \\
                   &= n \exp\left(-n(y-\theta)\right)^{n}
 \end{align*}
 
@@ -21,7 +21,7 @@ The expected value~$Y_{\min}$ is
 \begin{align*}
   \expect{Y_{\min}} &= \int y f_{Y_{\min}}(y) dy \\
                     &= -\frac{y}{\exp\left(n(y-\theta)\right)} - \frac{\exp\left(-n(y-\theta)\right)}{n} \bigg\vert_{\theta}^{\infty} & \text{Integration by parts} \\
-                    &= \theta + \frac{1}{n} & \text{L'Hopital's Rule} \text{.}
+                    &= \theta + \frac{1}{n} & \text{L'H\^{o}pital's Rule} \text{.}
 \end{align*}
 
 \noindent

@@ -9,7 +9,7 @@
   Assume that a random sample of size~$n$ has been collected.
 \end{problem}
 
-\begin{align*}
+\begin{align}
   \frac{1}{n} \sum_{i=1}^{n} y_i = \bar{y} &= \expectS{Y}{f(y;\theta)} \\
                      &= \int  y(\theta^{2} + \theta) y^{\theta - 1} (1 - y) dy \\
                      &= (\theta^{2} + \theta) \int y^{\theta} - y^{\theta + 1} dy \\
@@ -17,7 +17,7 @@
                      &= (\theta^{2} + \theta) \left( \frac{1}{\theta + 1} - \frac{1}{\theta + 2} \right)\\
                      &= \left( \frac{\theta^{2} + 2\theta}{\theta + 2} - \frac{\theta^{2} + \theta}{\theta + 2} \right)\\
                      &= \frac{\theta}{\theta + 2}
-\end{align*}
+\end{align}
 
 Rearranging the above we get:
 
