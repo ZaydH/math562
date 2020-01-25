@@ -11,18 +11,18 @@ Given
 \noindent
 makes the pdf for this problem
 
-\begin{align*}
+\begin{align}
   f_{Y_{\min}}(y) &= n\exp\left(-(y-\theta)\right) \bigg(\exp\left(-(y-\theta)\right)\bigg)^{n-1} \\
                   &= n \exp\left(-n(y-\theta)\right)^{n}
-\end{align*}
+\end{align}
 
 The expected value~$Y_{\min}$ is
 
-\begin{align*}
-  \expect{Y_{\min}} &= \int y f_{Y_{\min}}(y) dy \\
+\begin{align}
+  \expect{Y_{\min}} &= \int_{\theta}^{\infty} y f_{Y_{\min}}(y) dy \\
                     &= -\frac{y}{\exp\left(n(y-\theta)\right)} - \frac{\exp\left(-n(y-\theta)\right)}{n} \bigg\vert_{\theta}^{\infty} & \text{Integration by parts} \\
                     &= \theta + \frac{1}{n} & \text{L'H\^{o}pital's Rule} \text{.}
-\end{align*}
+\end{align}
 
 \noindent
 Therefore, $\boxed{Y_{\min} - \frac{1}{n}}$ is an unbiased estimator for~$\theta$.

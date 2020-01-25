@@ -11,17 +11,17 @@
 
 The expected value of $Y$ is
 
-\begin{align*}
-  \expect{Y} &= \int 2y^2 \theta^2 dy \\
+\begin{align}
+  \expect{Y} &= \int_{0}^{\frac{1}{\theta}} 2y^2 \theta^2 dy \\
              &= \frac{2y^3 \theta^2}{3} \bigg\vert_{0}^{\frac{1}{\theta}} \\
              &= \frac{2}{3\theta} \text{.}
-\end{align*}
+\end{align}
 
 The statistic's estimated value is:
 
-\begin{align*}
+\begin{align}
   \expect{cY_1 + 2cY_2} &= c\expect{Y_1} + 2c\expect{Y_2} \\
                         &= 3c\expect{Y}\text{.}
-\end{align*}
+\end{align}
 
 For this quantity to equal $\frac{1}{\theta}$, $\boxed{c=\frac{1}{2}}$.

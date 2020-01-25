@@ -28,11 +28,11 @@ Recall integration by parts specifies that
 \noindent
 The expected value of $Y_{\min}$ is:
 
-\begin{align*}
+\begin{align}
   \expect{Y_{\min}} &= \int y f_{Y_{\min}}(y) dy \\
                     &= y\int f_{Y_{\min}}(y) dy - \int \int f_{Y_{\min}}(y) dy dy \\
                     &= -y\left(1 - \frac{y}{\theta}\right)^{n}- \frac{\theta \left(1 - \frac{y}{\theta}\right)^{n+1}}{n+1} \bigg\vert_{0}^{\theta} \\
                     &= \frac{\theta}{n+1}\text{.}
- \end{align*}
+ \end{align}
 
  Therefore, $\boxed{(n+1)Y_{\min}}$ is an unbiased estimator of~$\theta$.
