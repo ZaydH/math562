@@ -1,0 +1,20 @@
+\begin{problem}
+  Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample from ${f_{Y}(y;\theta) = \frac{1}{\theta} e^{-y/\theta}\text{, } y > 0}$.  Compare the Cramer-Rao lower bound for ${f_{Y}(y;\theta)}$ to the variance of the maximum likelihood estimator for~$\theta$, ${\hat{\theta} = \frac{1}{n}\sum_{i=1}^{n}Y_i}$. Is~$\bar{Y}$ a best estimator for~$\theta$?
+\end{problem}
+
+\begin{align}
+  \ln f_Y &= -\ln\theta - \frac{y}{\theta} \\
+  \frac{\partial \ln f_Y}{\partial \theta} &= -\frac{1}{\theta} + \frac{y}{\theta^2} \\
+  \frac{\partial^{2} \ln f_Y}{\partial \theta^{2}} &= \frac{1}{\theta^2} - \frac{2y}{\theta^3}
+\end{align}
+
+\begin{align}
+  \expect{\frac{1}{\theta^2} - \frac{2y}{\theta^3}} &= \frac{1}{\theta^2} - \frac{2}{\theta^4} \int_{0}^{\infty} ye^{-y/\theta} dy \\
+                                                    &= \frac{1}{\theta^2} - \frac{2}{\theta^3} \int_{0}^{\infty} e^{-y/\theta} dy  & \text{Integration by Parts} \\
+                                                    &= \frac{1}{\theta^2} - \frac{2}{\theta^2} \\
+                                                    &= - \frac{1}{\theta^2}
+\end{align}
+
+The Cramer-Rao lower bound is therefore ${\boxed{\frac{\theta^2}{n}}}$.
+
+The exponential distribution's variance is~$\theta^2$.  Therefore, the variance of the mean is~$\frac{\theta}{n}$ making $\bar{Y}$~a best estimator.

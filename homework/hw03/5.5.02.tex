@@ -1,0 +1,19 @@
+\begin{problem}
+  Let ${X_1,X_2,\ldots,X_n}$ be a random sample of size~$n$ from the Poisson distribution, ${p_{X}(k;\lambda) = \frac{e^{-\lambda} \lambda^{k}}{k!}}$, ${k=0,1,\ldots}$. Show that ${\hat{\lambda} = \frac{1}{n} \sum_{i=1}^{n} X_i}$ is an efficient estimator for~$\lambda$.
+\end{problem}
+
+\begin{align}
+  \ln p &= \ln \left( \frac{e^{-\lambda} \lambda^{k}}{k!} \right) \\
+        &= -\lambda + k\ln(\lambda) - \ln(k!) \\
+  \frac{\partial \ln p}{\partial \lambda} &= -1 +\frac{k}{\lambda} \\
+  \frac{\partial^2 \ln p}{\partial \lambda^2} &= -\frac{k}{\lambda^2}
+\end{align}
+
+\begin{align}
+  \expect{\frac{\partial^2 \ln p}{\partial \lambda^2}} &= -\frac{1}{\lambda^2} \expect{k} \\
+                                                       &= -\frac{1}{\lambda}
+\end{align}
+
+The Cramer-Rao lower bound is ${\boxed{\frac{\lambda}{n}}}$.
+
+The Poisson distribution's variance is~$\lambda$.  Therefore, the mean has variance~${\frac{\lambda}{n}}$ making it efficient.
