@@ -1,0 +1,45 @@
+\begin{problem}
+  \probNum{5.4.18} Suppose that ${n = 5}$ observations are taken from the uniform pdf ${f_{Y}(y;\theta) = 1/\theta, 0 \leq y \leq \theta}$ where $\theta$~is unnown.  Two biased estimators for $\theta$~are:
+  \begin{equation*}
+    \hat{\theta}_1 = \frac{6}{5} \cdot Y_{\max} \text{ and } \hat{\theta}_2 = 6\cdot Y_{\min}\text{.}
+  \end{equation*}
+\end{problem}
+
+\begin{align*}
+  \expect{Y_{\max}^2} &= \int_{0}^{\theta} \frac{n y^{n+1}}{\theta^{n}} dy \\
+                                &= \frac{n\theta^2}{n+2}
+\end{align*}
+
+\begin{align*}
+  \text{Var}(Y_{\max}) &= \expect{Y_{\max}^2} - \expect{Y_{\max}}^{2} \\
+                       &= \frac{n}{n+2}\theta^2 - \frac{n^2}{(n+1)^{2}}\theta^2 \\
+                       &= \frac{n}{(n+2)(n+1)^{2}}\theta^{2}
+\end{align*}
+
+\begin{align*}
+  \expect{Y_{\min}} &= \int_{0}^{\theta} y f_{Y_{\min}}(y;\theta)dy \\
+                    &= \int_{0}^{\theta} \frac{ny}{\theta}\left(\frac{\theta -y}{\theta}\right)^{n-1} dy \\
+                    &= \int_{0}^{\theta} \left(\frac{\theta -y}{\theta}\right)^{n} dy & \text{Integration by parts} \\
+                    &= \frac{\theta}{n+1} & \text{Integration by Parts}
+\end{align*}
+
+\begin{align*}
+  \expect{Y_{\min}^{2}} &= \int_{0}^{\theta} y^2 f_{Y_{\min}}(y;\theta)dy \\
+                    &= \int_{0}^{\theta} \frac{ny^2}{\theta}\left(\frac{\theta -y}{\theta}\right)^{n-1} dy \\
+                    &= \int_{0}^{\theta} 2y\left(\frac{\theta -y}{\theta}\right)^{n} dy & \text{Integration by parts} \\
+                    &= \int_{0}^{\theta} \frac{2\theta}{n+1} \left(\frac{\theta -y}{\theta}\right)^{n+1} dy & \text{Integration by parts} \\
+                    &= \frac{2\theta^2}{(n+1)(n+2)} & \text{Integration by parts}
+\end{align*}
+
+\begin{align*}
+  \text{Var}(Y_{\min}) &= \expect{Y_{\min}^2} - \expect{Y_{\min}}^{2} \\
+                       &= \frac{2\theta^2}{(n+1)(n+2)}\theta^2 - \frac{\theta^2}{(n+1)^{2}} \\
+                       &=  \frac{n}{(n+1)^{2}(n+2)}\theta^2
+\end{align*}
+
+\begin{align*}
+  \var{\hat{\theta}_1} &= \frac{\theta^{2}}{n(n+2)}\\
+  \var{\hat{\theta}_2} &= \frac{n\theta^{2}}{n+2}
+\end{align*}
+
+${\var{\hat{\theta}_1} < \var{\hat{\theta}_2}}$.  This is expected since multiplicative scalar on $Y_{\min}$ is larger and amplifying the error.

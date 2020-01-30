@@ -1,0 +1,40 @@
+\begin{problem}
+  Let ${X_1,X_2,\ldots,X_n}$  denote the outcomes of a series of $n$~independent trials, where
+  \begin{equation*}
+    X_i =   \begin{cases}
+              1 & \text{with probability }~p \\
+              0 & \text{with probability }~1 - p
+            \end{cases}
+  \end{equation*}
+  \noindent
+  for ${i=1,2,\ldots,n}$. Let ${X = X_1 + X_2 + \cdots + X_n}$.
+\end{problem}
+
+\begin{subproblem}
+  Show that $\hat{p}_1 = X_1$ and ${\hat{p}_2 = \frac{X}{n}}$ are unbiased estimators for~$p$.
+\end{subproblem}
+
+\begin{align*}
+  \hat{p}_1 = \expect{X_i} &= \sum_{x \in \mathcal{X}} p_x \cdot x \\
+                            &= 1 * p + 0 * (1 - p) =\boxed{p}
+\end{align*}
+
+\begin{align*}
+  \hat{p}_2 = \expect{\frac{\bar{x}}{n}} &= \expect{\frac{1}{n} \left(X_1 + \cdots + X_n\right)} \\
+                                          &= \frac{1}{n} \sum_{i=1}^{n} \expect{X_i} \\
+                                          &= \frac{1}{n} np = \boxed{p}
+\end{align*}
+
+\begin{subproblem}
+  Intuitively, $\hat{p}_2$ is a better estimator than $\hat{p}_1$ because $\hat{p}_1$ fails to include any of the information about the parameter contained in trials~2 through~$n$. Verify that speculation by comparing the variances of~$\hat{p}_1$ and~$\hat{p}_2$.
+\end{subproblem}
+
+$\var{X1} = p(1-p)$ (Variance of Bernoulli)
+
+\begin{align}
+  \var{\frac{\bar{x}}{n}} &= n \var{\frac{X_i}{n}} \\
+                          &= \frac{1}{n} \text{Var}\left(X_i\right) \\
+                          &= \frac{p(1-p)}{n} \text{.}
+\end{align}
+
+For ${n > 1}$, ${\frac{p(1-p)}{n} < p(1-p)}$.

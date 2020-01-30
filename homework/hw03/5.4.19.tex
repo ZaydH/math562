@@ -1,0 +1,64 @@
+\begin{problem}
+  Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample size of size~$n$ from the pdf
+  \begin{equation}
+    f_Y(y;\theta) = \frac{1}{\theta}e^{-y\theta}\text{, }y > 0 \text{.}
+  \end{equation}
+\end{problem}
+
+\begin{subproblem}
+  Show that ${\thhat{1} = Y_1}$, ${\thhat{2} = \bar{Y}}$, and ${\thhat{3} = nY_{\min}}$ are all unbiased estimators for~$\theta$.
+\end{subproblem}
+
+\begin{align}
+  \expect{Y_1} &= \int_{0}^{\infty} \frac{y}{\theta} e^{-y/\theta}dy \\
+               &= e^{-y/\theta} \bigg\vert_{0}^{\theta} & \text{Integration by Parts}\\
+               &= \theta
+\end{align}
+
+\begin{align}
+  \expect{\bar{y}} &= \frac{1}{n} \sum_{i=1}^{n} \expect{Y_i} \\
+                   &= \frac{1}{n} n\theta = \theta
+\end{align}
+
+\begin{align}
+  f_{Y_{\min}}(y) &= \frac{1}{n\theta}e^{-y/\theta}\left(e^{-y/\theta}\right)^{n-1} \\
+  \expect{Y_{\min}} &= \int \frac{y}{n\theta} e^{-yn/\theta} dy \\
+                    &= \int e^{-yn/\theta} dy & \text{Integration by parts} \\
+                    &= \frac{\theta}{n}  & \text{Integration by parts}
+\end{align}
+Therefore, ${\expect{\thhat{3}} = n\expect{Y_{\min}} = \boxed{\theta}}$.
+
+\begin{subproblem}
+  Find the variances of~$\thhat{1}$, $\thhat{2}$, and~$\thhat{3}$.
+\end{subproblem}
+
+\begin{align}
+  \expect{Y^2} &= \int_{0}^{\infty} \frac{y^2}{\theta} e^{-y/\theta}dy \\
+               &= \int_{0}^{\infty} 2y e^{-y/\theta}dy & \text{Integration by parts}\\
+               &= \int_{0}^{\infty} 2\theta e^{-y/\theta}dy & \text{Integration by parts}\\
+               &= 2\theta^{2}
+\end{align}
+Therefore, ${\boxed{\thhat{1} = \theta^2}}$.
+
+\begin{align}
+  \var{\thhat{2}} &= \sum_{i=1}^{n} \var{Y_i /n} \\
+                  &= \boxed{\frac{1}{n}\theta^{2}}\text{.}
+\end{align}
+
+\begin{align}
+  f_{Y_{\min}}(y) &= \frac{1}{n\theta}e^{-y/\theta}\left(e^{-y/\theta}\right)^{n-1} \\
+  \expect{Y_{\min}^2} &= \int \frac{y^2}{n\theta} e^{-yn/\theta} dy \\
+                    &= \int 2y e^{-yn/\theta} dy & \text{Integration by parts} \\
+                    &= \int \frac{2\theta}{n} e^{-yn/\theta} dy & \text{Integration by parts} \\
+                    &=  \frac{2\theta^{2}}{n^{2}} & \text{Integration by parts}
+\end{align}
+Therefore, ${\var{\thhat{3}} = n^2 \var{Y_{\min}} = \theta^2}$.
+
+\begin{subproblem}
+  Calculate the relative efficiencies of~$\thhat{1}$ to~$\thhat{3}$ and $\thhat{2}$ to~$\thhat{3}$.
+\end{subproblem}
+
+\begin{align}
+  \text{Efficiency }\thhat{1} \text{ to }\thhat{3} &= \frac{\theta^2}{\theta^2} = \boxed{1} \\
+  \text{Efficiency }\thhat{2} \text{ to }\thhat{3} &= \frac{\theta^2}{\theta^2 /n} = \boxed{n}
+\end{align}
