@@ -1,12 +1,12 @@
 \begin{problem}
-  \probNum{5.5.5} Let $X$ have the pdf ${f_{X}(k;\theta) = \frac{(\theta - 1)^{k-1}}{\theta^{k}}}$, ${k=1,2,3,\ldots}$, ${\theta > 1}$, which is geometric (${p = 1 / \theta}$). For this pdf, ${E(X) = \theta}$ and ${\var{X} = \theta (\theta - 1)}$ (see Theorem~4.4.1).  Is the statistic~$\bar{X}$ efficient?
+  \probNum{5.5.5}~Let $X$ have the pdf ${f_{X}(k;\theta) = \frac{(\theta - 1)^{k-1}}{\theta^{k}}}$, ${k=1,2,3,\ldots}$, ${\theta > 1}$, which is geometric (${p = 1 / \theta}$). For this pdf, ${E(X) = \theta}$ and ${\var{X} = \theta (\theta - 1)}$ (see Theorem~4.4.1).  Is the statistic~$\bar{X}$ efficient?
 \end{problem}
 
-\begin{align*}
+\begin{align}
   \ln f_X &= (k-1)\ln(\theta - 1) - k \ln(\theta) \\
   \frac{\partial \ln f_X}{\partial X} &= \frac{k-1}{\theta - 1} - \frac{k}{\theta} \\
   \frac{\partial^2 \ln f_X}{\partial X^2} &= -\frac{k-1}{\left(\theta - 1\right)^2} + \frac{k}{\theta^{2}}
-\end{align*}
+\end{align}
 
 Given the provided expectation, we see that the Cramer-Rao lower bound is:
 \begin{align}
@@ -15,4 +15,4 @@ Given the provided expectation, we see that the Cramer-Rao lower bound is:
                                                                           &= \frac{-1}{\theta(\theta - 1)}
 \end{align}
 
-This makes the Cramer-Rao lower bound~$\frac{\theta(\theta - 1)}{n}$.  Given the above variance, the sample mean is~an efficient statistic since its variance is equivalent to the Cramer-Rao lower bound.
+This makes the Cramer-Rao lower bound~$\boxed{\frac{\theta(\theta - 1)}{n}}$.  Given the above variance, the sample mean is~an efficient statistic since its variance is equivalent to the Cramer-Rao lower bound.
