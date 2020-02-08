@@ -1,18 +1,4 @@
 \begin{problem}
-  Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample of size~$n$ from a normal pdf having~${\mu = 0}$.  Show that ${S^2 = \frac{1}{n} \sum_{i=1}^{n} Y_{i}^2}$ is a consistent estimator for ${\sigma^{2} = \text{Var}(Y)}$.
+  \probNum{5.7.2} Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample of size~$n$ from a normal pdf having~${\mu = 0}$.  Show that ${S^2 = \frac{1}{n} \sum_{i=1}^{n} Y_{i}^2}$ is a consistent estimator for ${\sigma^{2} = \text{Var}(Y)}$.
 \end{problem}
 
-Since each $Y_i$ is i.i.d.,
-\begin{align}
-  \vvar{\sigma^2} = \var{\frac{1}{n}\sum_{i=1}^{n} Y_{i}^{2}} &= \frac{1}{n^{2}} \sum_{i=1}^{n}\var{Y_i} \\
-                                                              &= \frac{1}{n} \var{Y_i} \\
-                                                              &= \frac{\sigma^2}{n}
-\end{align}
-
-By Chebyshev's Inequality
-\begin{align}
-  \Pr\sbrack{\abs{S^2 - \sigma^2} \geq \epsilon} &\leq \frac{\var{S^2}}{\epsilon^2} \\
-                                                 &= \frac{\sigma^2}{n\epsilon^2}\text{.}\label{eq:P06:Limit}
-\end{align}
-
-As ${n \rightarrow \infty}$, Eq.~\eqref{eq:P06:Limit} converges to 0 for finite constants~$\sigma$ and~$\epsilon$.

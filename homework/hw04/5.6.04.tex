@@ -1,0 +1,9 @@
+\begin{problem}
+  \probNum{5.6.4} Show that ${\hat{\sigma}^2 = \sum_{i=1}^{n} Y_i^2}$ is sufficient for $\sigma^2$ if ${Y_1,\ldots,Y_n}$ is a random sample from a normal pdf with ${\mu = 0}$.
+\end{problem}
+
+\begin{align}
+  L(\theta) &= \left(2\pi\sigma^2\right)^{-\frac{n}{2}} e^{-\frac{\sum_{i=1}^{n} (x_i - \mu)^2}{2\sigma^2}} \\
+            &= \left(2\pi\sigma^2\right)^{-\frac{n}{2}} e^{-\frac{\sum_{i=1}^{n} x_{i}^{2}}{2\sigma^2}} & \mu = 0 \\
+            &= \underbrace{\left(2\pi\sigma^2\right)^{-\frac{n}{2}} e^{-\frac{\hat{\sigma}^2}{2\sigma^2}}}_{p_{\hat{\sigma}^2}(\sigma^{2}_e;\sigma^2)} \underbrace{1}_{b(Y_1,\ldots,Y_n)}
+\end{align}

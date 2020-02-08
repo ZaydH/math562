@@ -1,11 +1,36 @@
 \begin{problem}
-  Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample of size~$n$ from from the exponential pdf, ${f_Y(y;\lambda) = \lambda e^{-\lambda y} \text{, } y > 0}$.
+  \probNum{5.7.3} Let ${Y_1,Y_2,\ldots,Y_n}$ be a random sample of size~$n$ from from the exponential pdf, ${f_Y(y;\lambda) = \lambda e^{-\lambda y} \text{, } y > 0}$.
 \end{problem}
 
 \begin{subproblem}
   Show that ${\hat{\lambda}_n = Y_1}$ is not consistent for~$\lambda$.
 \end{subproblem}
 
+% The variance of a exponential r.v.~$\frac{1}{\lambda^2}$.
+
+% By Chebyshev's~Theorem,
+% \begin{align}
+%   \Pr\sbrack{\abs{\hat{\lambda}_{n} - \lambda} \geq \epsilon} \geq \frac{1}{\lamda^2\epsion^2} \text{.}
+% \end{align}
+
+% This quantity does not converge to~0 so it is not consistent.
+
+\begin{align}
+  \Pr\sbrack{\abs{Y_1 - \lambda} \geq \epsilon} &= \int_{\lambda -\epsilon}^{\lambda + \epsilon} f_{Y}(y;\lambda) dy \\
+                                                &= \int_{\lambda -\epsilon}^{\lambda + \epsilon} \lambda e^{-\lambda y} dy \\
+                                                &= -e^{-\lambda y} \Big\vert_{\lambda -\epsilon}^{\lambda + \epsilon} \\
+                                                &= -e^{-\lambda (\lambda + \epsilon)}  + e^{-\lambda (\lambda - \epsilon)}
+\end{align}
+
+For ${\epsilon,\lambda >0}$, ${\Pr\sbrack{\abs{Y_1 - \lambda} \geq \epsilon} > 0}$.
+
 \begin{subproblem}
   Show that ${\hat{\lambda}_n = \sum_{i=1}^{n} Y_i}$ is not a consistent for~$\lambda$.
 \end{subproblem}
+
+To be consistent ${\lim_{n \rightarrow \infty} \var{\hat{y}_n} = 0}$ (since it converges to a single value). For independent~$Y_i$,
+\begin{align}
+  \var{\hat{\lambda}_n} &= \var{\sum_{i=1}^{n} Y_i} \\
+                        &= \sum_{i=1}^{n} \var{Y_i}
+\end{align}
+Since ${\var{Y_i}>0}$, that makes $\var{\hat{\lambda}_n}$ unbounded meaning $\hat{\lambda}_{n}$ cannot be a consistent estimator for any parameter.

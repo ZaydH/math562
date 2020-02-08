@@ -1,0 +1,16 @@
+\begin{problem}
+  \probNum{5.6.3} If $\hat{\theta}$~is sufficient for~$\theta$, show that any one-to-one function of~$\hat{\theta}$ is also sufficient for~$\theta$.
+\end{problem}
+
+Define ${\hat{\theta}' \defeq f\left(\hat{\theta}\right)}$ where $f$~is one\=/to\=/one.
+
+Since $\hat{\theta}$ is sufficient, it is possible to partition the likelihood function as:
+\begin{equation}
+  L(\theta) = \prod_{i=1}^{n} p_{X}(k_i;\theta) = p_{\hat{\theta}}(\theta_e;\theta)b(k_1,\ldots,k_n)\text{.}
+\end{equation}
+
+Since $f$ is one-to-one, its inverse $f^{-1}$, exists even if it is piecewise.  That means there is an equivalent formulation with substitution:
+\begin{equation}
+  L(\theta) =  p_{\hat{\theta}'}(f^{-1}(\theta_e);\theta)b(k_1,\ldots,k_n)\text{,}
+\end{equation}
+which by definition makes $\hat{\theta}'$ sufficient.
