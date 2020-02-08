@@ -9,5 +9,12 @@
   Show that ${\hat{\theta} = Y_{\min}}$ is sufficient for the threshold parameter~$\theta$.
 \end{subproblem}
 \begin{align}
-  f_{Y_{\min}} = ne^{-n(Y_{\min} - \theta)} \\
+  L(\theta) &= \prod_{i=1}^{n} e^{-(y_i - \theta)} \mathbbm{1}\sbrack{y_i \geq \theta} \label{eq:HW04:P04:Indicator}\\
+            &= \underbrace{\bigg(e^{n\theta} \mathbbm{1}\sbrack{Y_{\min} \geq \theta} \bigg)}_{p_{\hat{\theta}}(Y_{\min};\theta)} \underbrace{\left( e^{-\sum_{i=1}^{n} y_i}  \right)}_{b(Y_1,\ldots,Y_{n})}
 \end{align}
+
+\begin{subproblem}
+  Show that $Y_{\max}$ is not sufficient for~$\theta$.
+\end{subproblem}
+
+Returning to Eq.~\ref{eq:HW04:P04:Indicator}, it is clear that the indicator function~$\mathbbm{1}\sbrack{\ldots}$ terms must be a component in~$p_{\hat{\theta}}$ since it contains~$\theta$ and~$y_i$.  However, it is impossible to formulate it in terms of~$Y_{\max}$ as it was possible for~${Y_{\min}}$.  Hence it is not sufficient by Theorem~5.6.1.
