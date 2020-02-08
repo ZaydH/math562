@@ -1,0 +1,9 @@
+\begin{problem}
+  Suppose that~$X$ is a geometric random variable, where ${p_{X}(k\vert\theta) = (1-\theta)^{k-1}\theta\text{,  }k=1,2,\ldots}$. Assume that the prior distribution for~$\theta$ is the beta pdf with parameters~$r$ and~$s$.  Find the posterior distribution for~$\theta$.
+\end{problem}
+
+\begin{align}
+  g(\theta;k) &= \frac{\left(\frac{\Gamma(r+s)}{\Gamma(r)\Gamma(s)}\right) \theta^{r} (1 - \theta)^{s+k-2}}{\int_{0}^{1} \left(\frac{\Gamma(r+s)}{\Gamma(r)\Gamma(s)}\right) \theta^{r} (1 - \theta)^{s+k-2} d\theta} \\
+              &= \frac{\left(\frac{\Gamma(r+s+k)}{\Gamma(r+1)\Gamma(s+k-1)}\right) \theta^{r} (1 - \theta)^{s+k-2}}{\int_{0}^{1} \frac{\Gamma(r+s+k)}{\Gamma(r+1)\Gamma(s+k-1)} \theta^{r} (1 - \theta)^{s+k-2} d\theta} \\
+              &= \left(\frac{\Gamma(r+s+k)}{\Gamma(r+1)\Gamma(s+k-1)}\right) \theta^{r} (1 - \theta)^{s+k-2}
+\end{align}
