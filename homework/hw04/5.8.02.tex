@@ -1,0 +1,17 @@
+\begin{problem}
+  \probNum{5.8.2} Find the squared loss ${\sbrack{L(\hat{\theta},\theta) = \left(\hat{\theta} - \theta\right)^2}}$ Bayes estimate for the~$\theta$ in Example~5.8.2 and express it as a weighted average of the maximum likelihood estimate for~$\theta$ and the mean of the prior pdf.
+\end{problem}
+
+The squared loss Bayes estimate for~$\theta$ is the mean of the penultimate equation on page~333.  This is found from the Beta Distribution with~${r = k + 4}$ and~${s = n - k + 102}$.  Therefore, the mean is~$\frac{k+4}{n+106}$.
+
+\noindent
+It is easy to show that the MLE of the Binomial Distribution is~${\frac{k}{n}}$.
+
+\noindent
+The mean of the prior is from the Beta Distribution with~${r=4}$ and ${s=102}$ making it~${\frac{4}{106}}$.
+
+\noindent
+Specifying it as the weighted sum as required in the problem makes it:
+\begin{equation}
+  \boxed{\frac{n}{n+1}\left(\frac{k}{n}\right) + \frac{106}{n + 106} \left(\frac{4}{106}\right)}
+\end{equation}

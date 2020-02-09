@@ -1,0 +1,30 @@
+\begin{problem}
+  \probNum{5.8.3} Suppose that the binomial pdf described in Example~5.8.2 refers to the number of votes a candidate might receive in a poll conducted before the general election. Moreover, suppose a beta prior distribution has been assigned to~$\theta$, and every indicator suggests the election will be close.  The pollster, then, has good reason for concentrating the bulk of the prior distribution around the value~${\theta = \frac{1}{2}}$.  Setting the two beta parameters $r$~and $s$~both equal to~135 will accomplish that objective (in the event ${r = s = 135}$, the probability of~$\theta$ being between~$0.45$ and~$0.55$ is approximately~0.90).
+\end{problem}
+
+\begin{subproblem}
+  Find the corresponding posterior distribution
+\end{subproblem}
+\begin{align}
+  g(\theta;k) &= \frac{\binom{n}{k} \left(\frac{\Gamma(r+s)}{\Gamma(r)\Gamma(s)}\right) \theta^{r + k - 1} (1 - \theta)^{s+n-1-k}}{\int_{0}^{1} \binom{n}{k} \left(\frac{\Gamma(r+s)}{\Gamma(r)\Gamma(s)}\right) \theta^{r+k-1} (1 - \theta)^{s+n-k-1} d\theta} \\
+  g(\theta;k) &= \frac{\left(\frac{\Gamma(r+s+n)}{\Gamma(r+k)\Gamma(s + n - k)}\right) \theta^{r + k - 1} (1 - \theta)^{s+n-1-k}}{\int_{0}^{1} \left(\frac{\Gamma(r+s+n)}{\Gamma(r+k)\Gamma(s + n -k)}\right) \theta^{r+k-1} (1 - \theta)^{s+n-k-1} d\theta} \\
+  g(\theta;k) &= \left(\frac{\Gamma(r+s+n)}{\Gamma(r+k)\Gamma(s + n - k)}\right) \theta^{r + k - 1} (1 - \theta)^{s+n-1-k} \\
+  g(\theta;k) &= \left(\frac{\Gamma(270+n)}{\Gamma(135+k)\Gamma(135 + n - k)}\right) \theta^{134 + k} (1 - \theta)^{134+n-k}
+\end{align}
+
+\begin{subproblem}
+  Find the squared-error loss Bayes estimate for~$\theta$ and express it as a weighted average of the maximum likelihood estimate for~$\theta$ and the mean of the prior pdf.
+\end{subproblem}
+The Beta distribution's mean is~${\frac{r}{r+s}}$.  This is well-known and used without proof.
+
+\noindent
+The squared-error loss of~${g(\theta;k)}$ is its mean which for ${r=135+k}$ and ${s = 135 + n - k}$.  That makes the squared-loss Bayes estimate: ${\frac{135 + k}{270 + n}}$. For the prior, ${r=135}$ and~${s=135}$.   Therefore, the prior's mean is~${\frac{1}{2}}$.
+
+\noindent
+The MLE of~$\theta$ is found from the Binomial Distribution.  It is easy to show it is~${\frac{\bar{k}}{n}}$.  For a single sample, it is~$\frac{k}{n}$.
+
+\noindent
+Redefining the squared-loss of the Bayes' estimate we find:
+\begin{equation}
+  \boxed{\frac{n}{270 + n} \left(\frac{k}{n}\right) + \frac{270}{270+n} \left(\frac{1}{2}\right)}
+\end{equation}
