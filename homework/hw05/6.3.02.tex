@@ -1,0 +1,18 @@
+\begin{problem}
+  \probNum{6.3.2}~Efforts to find a genetic explanation for why certain people are right-handed and others left-handed have been largely unsuccessful. Reliable data are difficult to find because of environmental factors that also a child's ``handedness.''  To avoid that complication, researchers often study the analogous problem of ``pawedness'' in animals, where both genotypes and the environment can be partially controlled. In one such experiment, mice were put into a cage having a feeding tube that was equally accessible from the right or left.  Each mouse was then carefully watched over a number of feedings.  If it used its right paw more than half the time to activate the tube, it was defined to be ``right-pawed.'' Observations of this sort showed that 67\%~of mice belong to strain~A/J are right-pawed. A similar protocol was followed on a sample of thirty-five mice belonging to strain~A/HeJ. Of those thirty-five, a total of eighteen were eventually classified as right-pawed. Test whether proportion of right-pawed mice found in the A/HeJ~sample was significantly different from what was known about the A/H~strain.  Use a two-side alternative and let 0.05~be the probability associated with the critical region.
+\end{problem}
+
+\noindent
+The assumed standard deviation is found from the Bernoulli distribution with~${p=0.67}$. The standard deviation is:
+\begin{equation*}
+  \sigma = \sqrt{p(1-p)} = \sqrt{0.67 * 0.33} \approx 0.470\text{.}
+\end{equation*}
+
+\noindent
+The A/HeJ~sample will be rejected if:
+\begin{equation*}
+  \frac{\abs{\bar{y} - \mu}}{\sigma / \sqrt{n}} = \frac{\abs{\frac{18}{35} - 0.67}}{0.470 / \sqrt{35}} \geq Z_{\alpha /2} = 1.96 \text{.}
+\end{equation*}
+
+\noindent
+${Z = 1.960 \geq 1.96}$ so the hypothesis is rejected.

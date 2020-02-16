@@ -1,0 +1,22 @@
+\begin{problem}
+  \probNum{6.3.4}~Suppose $H_0$: ${p=0.45}$ is to be tested against $H_1$: ${p > 0.45}$ at the ${\alpha = 0.14}$ level of significance where ${p = P(\text{th trial ends in success})}$. If the sample size is two hundred, what is the smallest number of successes that will cause $H_0$~to be rejected?
+\end{problem}
+
+\noindent
+${Z_{\alpha} = 1.08}$.  The standard deviation is:
+\begin{equation*}
+  \sigma = \sqrt{p(1-p)} = \sqrt{0.45 * 0.55} \approx 0.497\text{.}
+\end{equation*}
+
+\noindent
+To reject, the observed probability of success must be
+\begin{align*}
+  \bar{p} &\geq y + Z_{\alpha} * \frac{\sigma}{\sqrt{n}} \\
+          &= 0.45 + 1.08 \frac{0.497}{\sqrt{200}} \\
+          &\approx 0.4880 \text{.}
+\end{align*}
+Therefore,
+\begin{align*}
+  n_{\text{smallest}} &= \ceil{0.4880 * 200} \\
+                      &= \ceil{97.59} = 98\text{.}
+\end{align*}
