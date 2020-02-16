@@ -1,0 +1,16 @@
+\begin{problem}
+  \probNum{6.4.1}~Recall the ``Math for the Twenty-First Century'' hypothesis test done in Example~6.2.1. Calculate the power of that test when the true mean is~500.
+\end{problem}
+
+The eighty-six Bayview students averaged~502.  The national average was~494 with standard deviation of~124. ${\alpha = 0.05}$.
+
+\begin{align*}
+  \alpha &= \Pr\sbrack{\text{Reject } H_0 \vert H_1 \text{ is true}} \\
+         &= \Pr\sbrack{\bar{Y} \geq \bar{y}* \vert \mu = 500} \\
+         &= \Pr\sbrack{\frac{\bar{Y} - 500}{124 /\sqrt{86}} > \frac{\bar{y}* - 500}{124 /\sqrt{86}}} \\
+         &= \Pr\sbrack{Z > \frac{\bar{y}* - 500}{124 /\sqrt{86}}} \\
+         &= 0.05
+\end{align*}
+
+\noindent
+If ${\alpha = 0.05}$, then ${Z = 1.645}$. Therefore, ${\bar{y}* = 122}$.

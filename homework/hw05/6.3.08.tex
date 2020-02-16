@@ -1,0 +1,18 @@
+\begin{problem}
+  \probNum{6.3.8}~The following is a Minitab printout of the binomial pdf ${p_{X}(k) = \binom{9}{k} (0.6)^k (0.4)^{9-k}}$, ${k=0,1,\ldots,9}$.  Suppose that $H_0$: ${p=0.6}$ is to be tested against ${H_1}$: ${p > 0.6}$, and we wish the level of significance to be \textit{exactly}~${0.05}$.  Use Theorem~2.4.1 to combine two different critical regions into a single randomized decision rule for which~${\alpha = 0.05}$.
+\end{problem}
+
+If performing ${n=9}$ trials and seek a decision rule with ${\alpha = 0.05}$ \textit{exactly}, a hybrid decision rule is required.
+\begin{itemize}
+  \item \textbf{Rule~\#1}: $k=9$.  This occurs with probability $\sim0.01$.
+  \item \textbf{Rule~\#2}: ${k \geq 8}$.  This occurs with probability $\sim0.07$.
+\end{itemize}
+\noindent
+These two rules can be assigned a weight such that:
+\begin{align*}
+  0.07x + 0.01(1 - x) &= 0.05 \\
+  0.06x &= 0.04 \\
+  \boxed{x = \frac{2}{3}}\text{.}
+\end{align*}
+\noindent
+Therefore, rule~\#1 is applied two-thirds of the time and rule~\#2 is applied one-third of the time.
