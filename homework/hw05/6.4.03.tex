@@ -1,0 +1,19 @@
+\begin{problem}
+  For the decision rule found in Question~6.2.2 to test $H_0$: ${\mu = 95}$ versus $H_1$: ${\mu \ne 95}$ at the ${\alpha = 0.06}$~level of significance, calculate ${1 - \beta}$ when~${\mu = 90}$.
+\end{problem}
+
+In 6.2.2, ${\sigma = 15}$ and ${n =22}$.
+\begin{equation}
+  \frac{\abs{\bar{Y} - 95}}{15 / \sqrt{22}} \geq Z_{\alpha/2} = 1.88
+\end{equation}
+\noindent
+Therefore, ${\bar{Y} \leq 89.0}$ and ${\bar{Y} \geq 101.0}$.
+
+\noindent
+\begin{align*}
+  1 - \beta &= \Pr\sbrack{\text{Reject } H_0 \vert H_1 \text{ is true}} \\
+            &= \Pr\sbrack{\bar{Y} \leq 89.0 \vert \mu = 90} + \Pr\sbrack{\bar{Y} \geq 101.0 \vert \mu = 90} \\
+            &= \Pr\sbrack{Z \leq \frac{-1}{15 / \sqrt{22}}} + \Pr\sbrack{\frac{11}{15 / \sqrt{22}}} \\
+            &= \Pr\sbrack{Z \leq -0.31} + \Pr\sbrack{Z \geq 3.44} \\
+            &= 0.3783 + 0.0003 = \boxed{0.3786}\text{.}
+\end{align*}

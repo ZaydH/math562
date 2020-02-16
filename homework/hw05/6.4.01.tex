@@ -2,15 +2,21 @@
   \probNum{6.4.1}~Recall the ``Math for the Twenty-First Century'' hypothesis test done in Example~6.2.1. Calculate the power of that test when the true mean is~500.
 \end{problem}
 
-The eighty-six Bayview students averaged~502.  The national average was~494 with standard deviation of~124. ${\alpha = 0.05}$.
-
-\begin{align*}
-  \alpha &= \Pr\sbrack{\text{Reject } H_0 \vert H_1 \text{ is true}} \\
-         &= \Pr\sbrack{\bar{Y} \geq \bar{y}* \vert \mu = 500} \\
-         &= \Pr\sbrack{\frac{\bar{Y} - 500}{124 /\sqrt{86}} > \frac{\bar{y}* - 500}{124 /\sqrt{86}}} \\
-         &= \Pr\sbrack{Z > \frac{\bar{y}* - 500}{124 /\sqrt{86}}} \\
-         &= 0.05
-\end{align*}
+The \textit{power of a test} is equal to~${1-\beta}$.
 
 \noindent
-If ${\alpha = 0.05}$, then ${Z = 1.645}$. Therefore, ${\bar{y}* = 122}$.
+The eighty-six Bayview students averaged~502.  The national average was~494 with standard deviation of~124. ${\alpha = 0.05}$.
+\begin{equation*}
+  \frac{\abs{\bar{Y} - 494}}{124 / \sqrt{86}} \geq Z_{\alpha/2} = 1.96
+\end{equation*}
+\noindent
+This makes ${\bar{Y} = 494 \pm 26.2}$.  Therefore ${\bar{Y} \leq 467.8}$ or ${\bar{Y} \geq 520.2}$.
+
+\noindent
+If the true mean is,
+\begin{align*}
+  1 - \beta &= \Pr\sbrack{\text{Reject } H_0 \vert H_1 \text{ is true}} \\
+            &= \Pr\sbrack{\bar{Y} \leq 467.8 \vert \mu = 500} + \Pr\sbrack{\bar{Y} \geq 520.2 \vert \mu = 500}\\
+            &= \Pr\sbrack{Z \leq -2.408} + \Pr\sbrack{Z \geq 1.511} \\
+            &= 0.008 + 0.0655 = \boxed{0.0735}.
+\end{align*}
