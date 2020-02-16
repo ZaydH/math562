@@ -1,0 +1,16 @@
+\begin{problem}
+  \probNum{6.2.10}~As a class research project, Rosaura wants to see whether the stress of final exams elevates the blood pressures of freshmen women.  When they are not under any untoward duress, healthy eighteen-year-old women have systolic blood pressures that average 120mm~Hg with a standard deviation of 12mm~Hg.  If Rosaura finds that the average blood pressure for the fifty women in Statistics~101 on the day of the final exam is~125.2, what should she conclude.  Set up and test an appropriate hypothesis.
+\end{problem}
+
+\noindent
+Since Rosaura is specifically testing for \textit{elevated} blood pressures, we are performing only a one-sided test with the null hypothesis being that testing does not raise student blood pressure.  The default value is ${\mu_0 = 120}$.  We will use ~${\alpha=0.05}$ as is common in my field.  I do not know what is common in her field.
+
+\noindent
+The hypothesis is rejected if:
+\begin{align*}
+  \frac{\bar{y} - \mu}{\sigma / \sqrt{n}} = \frac{125.2 - 120}{12 / \sqrt{50}} &> Z_{\alpha} = 1.645 \\
+  3.06 &> 1.645\text{.}
+\end{align*}
+
+\noindent
+The null hypothesis is rejected.
