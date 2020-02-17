@@ -1,0 +1,20 @@
+\begin{problem}
+  \probNum{6.4.15}~A series of $n$~Bernoulli trials is to be observed as data for testing.
+  \begin{center}
+    $H_0$: $p = \frac{1}{2}$ \\
+    \text{versus} \\
+    $H_1$: $p > \frac{1}{2}$ \\
+  \end{center}
+  \noindent
+  The null hypothesis will be rejected if~$k$, the observed number of successes, equals~$n$.  For what value of $p$~will the probability of committing a Type~II error equal~0.05.
+\end{problem}
+
+A \textit{Type~II} error is when null hypothesis~$H_0$ is not rejected although $H_1$~is true.
+
+For $p$~to be rejected, then~${k \ne n}$.  Therefore:
+\begin{align*}
+  \Pr\sbrack{H_0 \text{ is accepted} \vert H_1 \text{ is true}} &= 1 - \Pr\sbrack{k = n} \\
+            0.05 &= 1 - p^n \\
+            0.95 &= p^n \\
+            \boxed{0.95^{\frac{1}{n}} = p}
+\end{align*}

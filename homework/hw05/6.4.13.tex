@@ -1,0 +1,27 @@
+\begin{problem}
+  \probNum{6.4.13}~Suppose that a random sample of size~5 is drawn from a uniform pdf:
+  \begin{equation}
+    f_{Y}(y;\theta) = \begin{cases}
+                        \frac{1}{\theta} & 0 < y < \theta \\
+                        0 & \text{Otherwise}
+                      \end{cases}\text{.}
+  \end{equation}
+  \noindent
+  We wish to test
+  \begin{center}
+    $H_0$: $\theta = 2$ \\
+    \text{versus} \\
+    $H_1$: $\theta > 2$ \\
+  \end{center}
+  \noindent
+  by rejecting the null hypothesis if~${y_{\max} \geq k}$. Find the value of~$k$ that makes the probability of committing a Type~I error equal to~0.05.
+\end{problem}
+
+A \textit{Type~1 error} is a rejection of~$H_0$ despite it being true.
+
+\noindent
+The CDF of $Y_{\max}$~is
+\begin{equation*}
+  F(y) = \frac{y^5}{\theta ^5}\text{.}
+\end{equation*}
+With ${F(y) = 0.95}$ and ${\theta = 2}$, the rejection point is ${\boxed{y = 1.980}}$.
