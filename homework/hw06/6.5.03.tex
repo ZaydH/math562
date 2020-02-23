@@ -1,0 +1,26 @@
+\begin{problem}
+  \probNum{6.5.03}  Let ${y_1,y_2,\ldots,y_n}$ be a random sample from a normal pdf with unknown mean~$\mu$ and variance~1.  Find the form of the GLRT for ${H_0: \mu = \mu_0}$ versus ${H_1: \mu \ne \mu_0}$.
+\end{problem}
+
+The likelihood is:
+\begin{equation}
+  L_{n}(\mu) = \left( 2 \pi \right)^{-n/2} e^{-\frac{\sum_{i=1}^{n}(y_i - \mu)^2}{2}} \text{.}
+\end{equation}
+
+The maximum likelihood is:
+\begin{align}
+  \ell_{n}(\mu)  &= -\frac{n}{2} \ln(2\pi) - \frac{\sum_{i=1}^{n} (y_i - \mu)^2}{2} \\
+  \ell'_{n}(\mu) &=  \sum_{i=1}^{n} (y_i - \mu) = 0 \\
+           \mu_e &= \frac{\sum_{i=1}^{n} y_i}{n} = \bar{y} \text{.}
+\end{align}
+
+The GLR is:
+\begin{align}
+  \mu = \frac{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \mu_0)}{2} \right)}{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \bar{y})}{2} \right)} \\
+  \mu = \exp\left( \frac{ - \sum_{i=1}^{n} (y_i - \mu_0) + \sum_{i=1}^{n} (y_i - \bar{y})}{2} \right) \\
+  \mu = \exp\left( \frac{\sum_{i=1}^{n} (-y_{i}^{2} + 2y_i \mu_0  - \mu^2_0 + y^2_i - 2y_i \bar{y}  + \bar{y}^2)}{2} \right) \\
+  \mu = \exp\left( \frac{2n \bar{y} \mu_0  - n\mu^2_0 - 2n\bar{y}^2 + n\bar{y}^2}{2} \right) \\
+  \mu = \exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right)
+\end{align}
+
+The GLRT is ${\exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right) \leq \mu^{*}}$.

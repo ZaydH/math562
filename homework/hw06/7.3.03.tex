@@ -1,0 +1,13 @@
+\begin{problem}
+ \probNum{7.3.3} Is it believable that the numbers 65, 30, and~55 are a random sample of size~3 from a normal distribution with ${\mu = 50}$ and ${\sigma = 10}$ Answer the question by using a chi-square distribution. \textnormal{Hint: Let ${Z_i = (Y_1 - 50)/10}$ and use Theorem~7.3.1}.
+\end{problem}
+
+Using the specified transformation, we can solve for~$U$ as
+\begin{align}
+  U &= \sum_{j=1}^{m} Z_i^2 \\
+    &= 1.5^2 + (-2)^2 + 0.5^2
+    &= 2.25 + 4 + 0.25 \\
+    &= 6.5 \text{,}
+\end{align}
+\noindent
+with ${m=3}$.  Reviewing the table in the back of the book with ${\alpha = 0.05}$, the range of expected values is ${[0.216, 9.348]}$.  Therefore, there is insufficient evidence to reject the null hypothesis.
