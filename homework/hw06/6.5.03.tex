@@ -16,11 +16,11 @@ The maximum likelihood is:
 
 The GLR is:
 \begin{align}
-  \mu = \frac{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \mu_0)}{2} \right)}{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \bar{y})}{2} \right)} \\
-  \mu = \exp\left( \frac{ - \sum_{i=1}^{n} (y_i - \mu_0) + \sum_{i=1}^{n} (y_i - \bar{y})}{2} \right) \\
-  \mu = \exp\left( \frac{\sum_{i=1}^{n} (-y_{i}^{2} + 2y_i \mu_0  - \mu^2_0 + y^2_i - 2y_i \bar{y}  + \bar{y}^2)}{2} \right) \\
-  \mu = \exp\left( \frac{2n \bar{y} \mu_0  - n\mu^2_0 - 2n\bar{y}^2 + n\bar{y}^2}{2} \right) \\
-  \mu = \exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right)
+  \mu &= \frac{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \mu_0)}{2} \right)}{\exp\left( -\frac{\sum_{i=1}^{n} (y_i - \bar{y})}{2} \right)} \\
+  \mu &= \exp\left( \frac{ - \sum_{i=1}^{n} (y_i - \mu_0) + \sum_{i=1}^{n} (y_i - \bar{y})}{2} \right) \\
+  \mu &= \exp\left( \frac{\sum_{i=1}^{n} (-y_{i}^{2} + 2y_i \mu_0  - \mu^2_0 + y^2_i - 2y_i \bar{y}  + \bar{y}^2)}{2} \right) \\
+  \mu &= \exp\left( \frac{2n \bar{y} \mu_0  - n\mu^2_0 - 2n\bar{y}^2 + n\bar{y}^2}{2} \right) \\
+  \mu &= \exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right)
 \end{align}
 
-The GLRT is ${\exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right) \leq \mu^{*}}$.
+The GLRT is ${\exp\left(\frac{-n}{2} (\mu_0 - \bar{y})^2 \right) \leq \lambda^{*}}$.
