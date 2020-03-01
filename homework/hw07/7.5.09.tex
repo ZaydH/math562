@@ -1,0 +1,36 @@
+\begin{problem}
+  \probNum{7.5.9}~How long sporting events last is quite variable.  This variability can cause problems for TV~broadcasters, since the amount of commercials and commentator blather varies with the length of the event.  As an example of this variability, the table below gives the lengths of a random sample of middle\=/round contents at the Wimbeldon Championships in women's tennis.
+\end{problem}
+
+For the data, ${s^2 = 742.38}$.
+
+\begin{subproblem}
+  Assume that match lengths are normally distributed. Use Theorem~7.5.1 to construct a 95\%~confidence interval for the standard deviation of match lengths.
+\end{subproblem}
+
+\begin{align}
+  \left(\sqrt{frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}},\sqrt{\frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}}\right) &= \left(\sqrt{\frac{15 * 742.38}{27.488}}, \sqrt{\frac{15 * 742.38}{6.262}}\right) \\
+                                                                                                          &= \left(20.13,42.17\right)\text{.}
+\end{align}
+
+\begin{subproblem}
+  Use the same data to construct the two one-sided 95\%~confidence intervals for~$\sigma$.
+\end{subproblem}
+
+The first one side hypothesis test is:
+\begin{align}
+  \sigma_0 &\leq \sqrt{\frac{(n-1)  s^2}{\chi_{1- \alpha,n-1}^{2}}} \\
+           &= \sqrt{\frac{15 * 742.38}{7.261}} \\
+           &= 39.16 \text{,}
+\end{align}
+\noindent
+making the range~${(0, 39.16)}$.
+
+The first one side hypothesis test is:
+\begin{align}
+  \sigma_0 &\geq \sqrt{\frac{(n-1)  s^2}{\chi_{\alpha,n-1}^{2}}} \\
+           &= \sqrt{\frac{15 * 742.38}{24.996}} \\
+           &= 21.11 \text{,}
+\end{align}
+\noindent
+making the range~${(21.11,\infty)}$.
