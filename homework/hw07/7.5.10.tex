@@ -1,0 +1,12 @@
+\begin{problem}
+  \probNum{7.5.10}~How much interest certificates of deposit~(CDs) pay varies by financial institution and also by length of the investment.  A large sample of national one-year CD offerings in~2009 showed an average interest rate of~1.84 and a standard deviation of~${\sigma  = 0.262}$.  A five\=/year CD ties up an investor's money, so it usually pays a higher rate of interest.  However, higher rates might cause more variability.  The table lists the five\=/year CD rate offerings from ${n = 10}$ banks in the northeast United States.  Find a 95\%~confidence interval for the standard deviation of five\=/year CD rates.  Do these data suggest that interest rates for five\=/year CDs are more variable than those for one\=/year certificates.
+\end{problem}
+
+${\chi_{0.025,9}^2 = 2.700}$, ${\chi_{0.975,9}^2 = 19.023}$, ${n =10}$ and ${s^2 = 0.192}$.
+
+The confidence interval is:
+\begin{align}
+  \left(\sqrt{frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}},\sqrt{\frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}}\right) &= \left(\sqrt{\frac{9 * 0.192}{19.023}}, \sqrt{\frac{9 * 0.192}{2.700}}\right) \\
+                                                                                                          &= \left(0.301,0.603\right)\text{.}
+\end{align}
+Since ${\sigma = 0.262}$ on one year CDs, data indicates 5~year CDs are more variable.
