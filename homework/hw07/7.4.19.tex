@@ -1,0 +1,17 @@
+\begin{problem}
+  \probNum{7.4.19}~MBAs R US advertises that its program increases a person's score on the GMAT by an average of forty points.  As a way of checking the validity of that claim, a consumer watchdog group hired fifteen students to take both the review course and the~GMAT\@.  Prior to starting the course, the fifteen students were given a diagnostic test that predicted how well they would do on the GMAT in the absence of any special training.  The following table gives each student's actual GMAT~score minus his or her predicted score.  Set up and carry out an appropriate hypothesis test.  Use the 0.05~level of significance.
+\end{problem}
+
+$H_0: \mu = 40$\\
+$H_1: \mu < 40$  A one-sided test is appropriate since if the improvement is greater than the advertised~40 points, that is not a concern.
+
+${n = 15}$ so ${T_{0.05,14} = 1.7613}$.  The sample standard deviation is:
+\begin{equation}
+  s = \sqrt{\frac{\sum_{i=1}^{15} \left(y_{i}^2\right) - n \bar{y}^2}{n-1}} = \sqrt{20966 - 15 * 37.066^2}{14} = 5.05\text{.}
+\end{equation}
+
+The null hypothesis is rejected if:
+\begin{equation}
+  T < \mu - \frac{T_{0.05,14} \cdot \sigma}{\sqrt{n}} = 40 - \frac{1.7613 \cdot 5.05}{\sqrt{15}} = 37.7\text{.}
+\end{equation}
+${\bar{y} = 37.066}$ so the null hypothesis is \underline{rejected}.
