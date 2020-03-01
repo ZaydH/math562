@@ -1,0 +1,29 @@
+\begin{problem}
+  \probNum{7.4.11}~In a nongeriatric population, platelet counts ranging from~140 to~440 (thousands per mm\textsuperscript{3} of blood) are considered ``normal.'' The following are the platelet counts record for twenty-four female nursing home residents~(180).
+
+  Use the following sums:
+
+  \begin{align}
+    \sum_{i=1}^{24} y_i = 4645 &\text{ and }  &\sum_{i=1}^{24} y_i^{2} = 959,265 \text{.}
+  \end{align}
+
+  How does the definition of ``normal'' above compare with the 90\%~confidence interval?
+\end{problem}
+
+${\bar{\mu} = 193.5}$. ${n = 24}$.  For ${\alpha = 0.9}$, ${T_{0.05,23} = 1.714}$. The sample standard deviation is:
+\begin{align}
+  s^{2} &= \frac{\sum_{i=1}^{n} \left(x_i - \bar{x}\right)^2}{n-1} \\
+        &= \frac{\sum_{i=1}^{n} \left(x^2_{i} - 2x_i \bar{x} + \bar{x}^2\right)}{n-1} \\
+        &= \frac{\sum_{i=1}^{n} \left(x^2_{i}\right) - 2n\bar{x}^2 + n\bar{x}^2}{n-1} \\
+        &= \frac{\sum_{i=1}^{n} \left(x^2_{i}\right) - n\bar{x}^2}{n-1} \\
+        &= \frac{959,265 - 24 \cdot \left(193.5\right)^2}{23} \\
+        &= 2637
+\end{align}
+
+The confidence interval is then:
+\begin{align}
+  \bar{\mu} \pm \frac{T_{\alpha / 2, \text{df}} \cdot s}{n} &= 193.5 \pm \frac{1.714 \cdot 51.35}{\sqrt{24}} \\
+                                                            &= 193.5 \pm 18.0 \text{.}
+\end{align}
+
+Therefore the confidence interval is~$\sbrack{175.5,211.5}$.
