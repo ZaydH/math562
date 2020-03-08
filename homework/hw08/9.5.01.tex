@@ -1,0 +1,21 @@
+\begin{problem}
+  \probNum{9.5.1}~Historically, fluctuations in the amount of rare metals found in coins are not uncommon (82). The following data may be a case in point. Listed are the silver percentages found in samples of a Byzantine coin minted on two separate occasions during the reign of Manuel~I~(1143\=/1180). Construct a 90\%~confidence interval for ${\mu_{X} - \mu_{Y}}$, the true average difference in the coin’s silver content (= ``early'' - ``late''). What does the interval imply about the outcome of testing ${H_0: \mu_{X} = \mu_{Y}}$? For these data, ${s_{X} = 0.54}$ and~${s_{Y} = 0.36}$.
+\end{problem}
+
+\noindent
+Assuming equal variance. ${n = 9}$ and~${m = 7}$.
+\begin{align}
+  S_{p} &= \sqrt{\frac{(n-1)S^{2}_{X} + (m-1)S^{2}_{Y}}{n + m - 2}} \\
+        &= \sqrt{\frac{8 \cdot 0.54^2 + 6 \cdot 0.36^2}{9 + 7 - 2}} \\
+        &= 0.4471\text{.}
+\end{align}
+
+${t_{0.05,13} = 1.7709}$.  ${\mu_{X} = 6.7}$ and~${\mu_{Y} = 5.6}$. The confidence interval is then:
+\begin{align}
+  \sbrack{\bar{x} - \bar{y} - t_{\alpha/2,n+m-2} \cdot s_p\sqrt{\frac{1}{n} + \frac{1}{m}},\bar{x} - \bar{y} + t_{\alpha/2,n+m-2} \cdot s_p\sqrt{\frac{1}{n} + \frac{1}{m}}} \\
+  \sbrack{6.7 - 5.6 - 1.7709 \cdot 0.471 \sqrt{\frac{1}{9} + \frac{1}{7}}, 6.7 - 5.6+ 1.7709 \cdot 0.471 \sqrt{\frac{1}{9} + \frac{1}{7}}} \\
+  \sbrack{1.1 - 0.4203, 1.1 + 0.4203} \\
+  \sbrack{0.680, 1.520}
+\end{align}
+
+This indicates with at least 95\% certainty the means are different.
