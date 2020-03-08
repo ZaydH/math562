@@ -1,0 +1,18 @@
+\begin{problem}
+  \probNum{9.5.2}~Male fiddler crabs solicit attention from the opposite sex by standing in front of their burrows and waving their claws at the females who walk by. If a female likes what she sees, she pays the male a brief visit in his burrow. If everything goes well and the crustacean chemistry clicks, she will stay a little longer and mate. In what may be a ploy to lessen the risk of spending the night alone, some of the males build elaborate mud domes over their burrows. Do the following data suggest that a male's time spent waving to females is influenced by whether his burrow has a dome? Answer the question by constructing and interpreting a 95\%~confidence interval for~${\mu_{X} - \mu_{Y}}$. Use the value~${s_p = 11.2}$.
+\end{problem}
+
+\noindent
+${\bar{X} = 83.96}$ and~${\bar{Y} = 84.84}$. ${n = 5}$ and~${m = 7}$.
+
+\noindent
+${t_{0.025,10} = 2.2281}$.  This makes the confidence interval:
+\begin{align}
+  \sbrack{\bar{x} - \bar{y} - t_{\alpha/2,n+m-2} \cdot s_p\sqrt{\frac{1}{n} + \frac{1}{m}},\bar{x} - \bar{y} + t_{\alpha/2,n+m-2} \cdot s_p\sqrt{\frac{1}{n} + \frac{1}{m}}} \\
+  \sbrack{83.96 - 84.84 - 2.2281 \cdot 11.2 \sqrt{\frac{1}{5} + \frac{1}{7}}, 83.96 - 84.84 + 2.2281 \cdot 11.2 \sqrt{\frac{1}{5} + \frac{1}{7}}} \\
+  \sbrack{-0.88 - 14.612, -0.88 + 14.612} \\
+  \sbrack{-15.492, 13.732}
+\end{align}
+
+\noindent
+${\mu_{X} - \mu_{Y} = 0}$ is in the confidence interval so the hypothesis is \underline{not rejected}.
