@@ -1,0 +1,20 @@
+\begin{problem}
+  \probNum{9.2.4}~Among a number of beliefs concerning the so\=/called \textit{lunar effect} is that more children are born during the full moon.  The table below gives the average number of births per day during the full moon (lunar faction~${{\geq}0.95}$) versus the average number during a period of lunar fraction~${{\leq} 0.75}$. The table shows the opposite effect.  The average is smaller during the full moon. But is this a significant difference? Test the equality of means at the 0.05~level of significance.  Assume the variances are equal.
+\end{problem}
+
+\noindent
+${H_0: \mu_{X} = \mu_{Y}}$ \\
+${H_1: \mu_{X} \ne \mu_{Y}}$
+
+\begin{align}
+  S_{p} &= \sqrt{\frac{(n-1)S^{2}_{X} + (m-1)S^{2}_{Y}}{n + m - 2}} \\
+        &= \sqrt{\frac{108 \cdot 2017^2 + 493 \cdot 1897^2}{109 + 494 - 2}} \\
+        &= 1919.12
+\end{align}
+
+\begin{align}
+  t &= \frac{\bar{X} - \bar{Y}}{S_{p} \sqrt{\frac{1}{n} + \frac{1}{m}}} \\
+    &= \frac{10732 - 10970}{1919.12 \sqrt{\frac{1}{109} + \frac{1}{494}}} \\
+    &= -1.17
+\end{align}
+Since the sample size is large, the $Z$\=/score can be used making ${Z_{0.025} = 1.96}$.  Since ${1.17 < 1.96}$, the null hypothesis is \underline{not rejected}.
