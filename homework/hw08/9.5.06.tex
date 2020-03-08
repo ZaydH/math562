@@ -1,0 +1,15 @@
+\begin{problem}
+  \probNum{9.5.6}~Construct a 95\%~confidence interval for ${\sigma_{X}^2 / \sigma_{Y}^2}$ based on the data in Case Study~9.2.1.  The hypothesis test referred to tacitly assumed that the variances were equal.  Does that agree with your confidence interval? Explain.
+\end{problem}
+
+\noindent
+Per the case study, the two sample variances are: ${s_{X}^2 = 2.103 \cdot 10^{-4}}$ and~${s_{Y}^2 = 9.55 \cdot 10^{-5}}$. ${n = 8}$ and~${m = 10}$.
+
+${F_{0.025,7,9} = 0.238}$ and~${F_{0.975,7,9} = 4.82}$. The confidence interval of the ratio~$\frac{\sigma_{X}^2}{\sigma_{Y}^2}$ is defined as:
+\begin{align}
+  \left(\frac{s_{X}^2}{s_{Y}^2} F_{\alpha/2,m-1,n-1}, \frac{s_{X}^2}{s_{Y}^2} F_{1-\alpha/2,m-1,n-1} \right) \\
+  \left(2.202 \cdot 0.238, 2.202 \cdot 4.82 \right) \\
+  \left(0.524,10.614\right) \text{.}
+\end{align}
+
+If the variances are equal then the ratio equals~1, which is within the confidence interval.  Therefore, the null hypothesis that the variances are equal is reasonable.
