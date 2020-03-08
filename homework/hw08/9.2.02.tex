@@ -1,0 +1,22 @@
+\begin{problem}
+  \probNum{9.2.2}~As the United States has struggled with the growing obesity of its citizens, diets have become big business. Among the many competing regimens for those seeking weight reduction are the Atkins and Zone diets. In a comparison of these two diets for one-year weight loss, a study found that seventy\=/seven subjects on the Atkins diet had an average weight loss of ${\bar{x} = -4.7\text{kg}}$ and a sample standard deviation of~${s_X =7.05\text{kg}}$. Similar figures for the seventy-nine people on the Zone diet were~${\bar{y} = -1.6\text{kg}}$ and ${s_Y = 5.36\text{kg}}$. Is the greater reduction with the Atkins diet statistically significant? Test for ${\alpha = 0.05}$.
+\end{problem}
+
+\noindent
+${H_0: \mu_{X} = \mu_{Y}}$ \\
+${H_1: \mu_{X} < \mu_{Y}}$
+
+\begin{align}
+  W &= \frac{\bar{X} - \bar{Y} - (\mu_{X} - \mu_{Y})}{\frac{S_{X}^{2}}{n} + \frac{S_{Y}^{2}}{m}} \\
+    &= \frac{-4.7 - 3.1 - (0)}{\frac{7.05^2}{77}+\frac{5.36}{79}} \\
+    &= -3.086\text{.}
+\end{align}
+
+${\hat{\theta} = \frac{7.05^2}{5.36^2} = 1.730}$.  This makes the degrees of freedom estimate
+\begin{align}
+  \nu &= \frac{(\hat{\theta} + \frac{n}{m})^2}{\frac{1}{n-1}\hat{\theta}^2 + \frac{1}{m-1}\left(\frac{n}{m}\right)^2} \\
+      &= \frac{\left(1.730 + \frac{77}{79}\right)^2}{\frac{1}{76} 1.730^2 + \frac{1}{78}\left(\frac{77}{79}\right)^2} \\
+      &= 141.88 \text{.}
+\end{align}
+
+${t_{0.05,100} = 1.6602}$ (with the value even smaller for more degrees of freedom.  ${3.086 > 1.6602}$~so  the result \underline{is statistically significant}.

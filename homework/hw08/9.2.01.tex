@@ -1,0 +1,37 @@
+\begin{problem}
+  \probNum{9.2.1}~Some states that operate a lottery believe that restricting the use of lottery profits to supporting education makes the lottery more profitable. Other states permit general use of lottery income.  The profitability of the lottery for a group of states in each category is given below.
+
+  Test at the ${\alpha = 0.01}$~level whether the mean profit of states using the lottery for education is higher than that of states permitting general use. Assume that the variances of the two random variables are equal.
+\end{problem}
+
+Define $X$~as the education states, and $Y$~is the general use states.
+
+\noindent
+${H_0: \mu_{X} = \mu_{Y}}$ \\
+${H_0: \mu_{X} > \mu_{Y}}$
+
+Since ${\sigma_{X} = \sigma_{Y}}$, we can use the property:
+\begin{equation}
+  t = \frac{\bar{X} - \bar{Y}}{S_{p} \sqrt{\frac{1}{n} + \frac{1}{m}}}
+\end{equation}
+\noindent
+where
+\begin{equation}
+  S^{2}_{p} = \frac{(n-1)S^{2}_{X} + (m-1)S^{2}_{Y}}{n + m - 2}\text{.}
+\end{equation}
+
+${\bar{X} = 29.83}$ and ${\bar{Y} = 26.89}$. ${S^{2}_{X} = 13.78}$ and ${S^{2}_{Y} = 15.61}$.
+
+This makes the sample variance:
+\begin{align}
+  S^{2}_{p} &= \frac{(12 - 1) * 13.78 + (9 - 1) * 15.61}{12 + 9 - 2} \\
+            &= \frac{276.46}{19}
+            &= 14.55 \text{.}
+\end{align}
+This makes:
+\begin{align}
+  t &=  \frac{29.83 - 26.89}{3.81 \sqrt{\frac{1}{12} + \frac{1}{9}}} \\
+    &= 1.748\text{.}
+\end{align}
+\noindent
+${t_{0.01,19} = 2.539}$ so the null hypothesis is \underline{not rejected}.
