@@ -1,9 +1,27 @@
 \begin{problem}
-  \probNum{9.2.17}~Poverty Point is the name given to a number of widely scattered archaeological sites throughout Louisiana, Mississippi, and Arkansas.  These are the remains of a society thought to have flourished during the period from~1700 to~500~B.C.\ Among their characeristic artifacts are ornaments that were fashioned out of clay and then baked.  The following table shows the dates (in years~BC) associated with four of these baked clay ornaments found in two different Poverty Point sites, Terral Lewis and Jaketown.  The averages for the two samples are~1133.0 and~1013.5, respectively.  Is it believable that these two settlements developed the technology to manufacture baked clay ornaments at the same time?  Set up and test an appropriate~$H_0$ against a two-side~$H_1$ at the ${\alpha = 0.05}$\%~level of significance.  For these data,~${s_{X} = 266.9}$ and~${s_Y = 224.3}$.
+  \probNum{9.2.17}~A person exposed to an infectious agent, either by contact or by vaccination, normally develops antibodies to that agent. Presumably, the severity of an infection is related to the number of antibodies produced. The degree of antibody response is indicated by saying that the person’s blood serum has a certain titer, with higher titers indicating greater concentrations of antibodies. The following table gives the titers of twenty-two persons involved in a tularemia epidemic in Vermont. Eleven were quite ill; the other eleven were asymptomatic. Use Theorem~9.2.3 to test ${H_0: \mu_X = \mu_Y}$ against a one\=/sided~${H_1}$ at the 0.05~level of significance.
+
+  The sample standard deviations for the “Severely Ill” and “Asymptomatic” groups are 428 and 183, respectively.
 \end{problem}
 
 \noindent
 ${H_0: \mu_{X} = \mu_{Y}}$ \\
-${H_1: \mu_{X} \ne \mu_{Y}}$
+${H_0: \mu_{X} > \mu_{Y}}$
 
-${\mu_{X} = 1133}$ and
+\noindent
+${n = m = 11}$. ${\mu_{X} = 545.45}$ and~${\mu_{Y} = 241.82}$.
+\begin{align}
+  W &= \frac{\bar{X} - \bar{Y} - (\mu_{X} - \mu_{Y})}{\sqrt{\frac{S_{X}^{2}}{n} + \frac{S_{Y}^{2}}{m}}} \\
+    &= \frac{545.45 - 241.82 - (0)}{\sqrt{\frac{428^2}{11}+\frac{183}{11}}} \\
+    &= 2.163\text{.}
+\end{align}
+
+${\hat{\theta} = \frac{428^2}{183^2} \approx 5.470}$.  This makes
+\begin{align}
+  \nu &= \frac{(\hat{\theta} + \frac{n}{m})^2}{\frac{1}{n-1}\hat{\theta}^2 + \frac{1}{m-1}\left(\frac{n}{m}\right)^2} \\
+      &= \frac{\left(5.470 + \frac{11}{11}\right)^2}{\frac{1}{10} 5.470^2 + \frac{1}{10}\left(\frac{11}{11}\right)^2} \\
+      &= 13.538 \text{.}
+\end{align}
+
+\noindent
+${t_{0.05,14} = 1.7613}$.  Therefore, the null hypothesis is \underline{rejected}.
