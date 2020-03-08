@@ -1,0 +1,31 @@
+\begin{problem}
+  \probNum{9.3.3}~Among the standard personality inventories used by psychologists is the thematic apperception test (TAT) in which a subject is shown a series of pictures and is asked to make up a story about each one. Interpreted properly, the content of the stories can provide valuable insights into the subject’s mental well-being. The following data show the TAT results for forty women, twenty of whom were the mothers of normal children and twenty the mothers of schizophrenic children. In each case the subject was shown the same set of ten pictures. The figures recorded were the numbers of stories (out of ten) that revealed a positive parent-child relationship, one where the mother was clearly capable of interacting with her child in a flexible, open-minded way.
+\end{problem}
+
+\begin{subproblem}
+  Test~${H_0 : \sigma_{X}^{2} = \sigma_{Y}^{2}}$ versus~${H_1 : \sigma_{X}^{2} \ne \sigma_{Y}^{2}}$, where~$\sigma_{X}^2$ and~$\sigma_{Y}^{2}$ are the variances of the scores of mothers of normal children and scores of mothers of schizophrenic children, respectively. Let~${\alpha = 0.05}$.
+\end{subproblem}
+
+${S^{2}_{X} = 3.524}$ and~${S^{2}_Y = 2.411}$.  ${n = m = 20}$.
+
+The $F$\=/table does not have values for ${n=m=20}$ so ${n=m=21}$ is used. ${F_{0.025,20,20} = 0.406}$ and ${F_{0.975,20,20} = 2.46}$\text{.}  ${\frac{S^{2}_{X}}{S^{2}_{Y}} = \frac{3.524}{2.411} = 1.416}$.  Since ${F_{0.025,20,20} < \frac{S^{2}_{X}}{S^{2}_{Y}} < F_{0.975,20,20}}$ so the hypothesis is \text{not rejected}.
+
+\begin{subproblem}
+  If~${H_0: \sigma_{X}^{2} = \sigma_{Y}^{2}}$ is accepted in part~(a), test ${\mu_{X} = \mu_{Y}}$ versus~${H_{1}: \mu_{X} \ne \mu_{Y}}$. Set $\alpha$~equal to~0.05.
+\end{subproblem}
+
+${\bar{X} = 3.55}$ and ${\bar{Y} = 2.1}$.  ${n = m = 20}$.  We proceed with the assumption of identical variance so:
+\begin{align}
+  S^{2}_{p} = \frac{(n-1)S^{2}_{X} + (m-1)S^{2}_{Y}}{n + m - 2} \\
+            &= \frac{(20 - 1) * 3.524+ (20 - 1) * 2.411}{20 + 20 - 2} \\
+            &= 2.967 \text{.}
+\end{align}
+
+This makes:
+\begin{align}
+  t &= \frac{\bar{X} - \bar{Y}}{S_{p} \sqrt{\frac{1}{n} + \frac{1}{m}}} \\
+    &=  \frac{3.55 - 2.1}{\sqrt{2.967} \sqrt{\frac{1}{20} + \frac{1}{20}}} \\
+    &= 2.662\text{.}
+\end{align}
+
+${t_{0.025,38} = 2.0244}$.  The hypothesis is \underline{rejected}.
