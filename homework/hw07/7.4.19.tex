@@ -6,13 +6,13 @@
 $H_0: \mu = 40$\\
 $H_1: \mu < 40$  A one-sided test is appropriate since if the improvement is greater than the advertised~40 points, that is not a concern.
 
-${n = 15}$ so ${T_{0.05,14} = 1.7613}$.  The sample standard deviation is:
+${n = 15}$ so ${t_{0.05,14} = 1.7613}$.  The sample standard deviation is:
 \begin{equation}
   s = \sqrt{\frac{\sum_{i=1}^{15} \left(y_{i}^2\right) - n \bar{y}^2}{n-1}} = \sqrt{\frac{20966 - 15 * 37.066^2}{14}} = 5.05\text{.}
 \end{equation}
 
 The null hypothesis is rejected if:
 \begin{equation}
-  T < \mu - \frac{T_{0.05,14} \cdot s}{\sqrt{n}} = 40 - \frac{1.7613 \cdot 5.05}{\sqrt{15}} = 37.7\text{.}
+  \bar{y} < \mu - \frac{t_{0.05,14} \cdot s}{\sqrt{n}} = 40 - \frac{1.7613 \cdot 5.05}{\sqrt{15}} = 37.7\text{.}
 \end{equation}
 ${\bar{y} = 37.066}$ so the null hypothesis is \underline{rejected}.
