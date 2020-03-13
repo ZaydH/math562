@@ -9,7 +9,7 @@ For the data, ${s^2 = 742.38}$.
 \end{subproblem}
 
 \begin{align}
-  \left(\sqrt{frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}},\sqrt{\frac{(n-1)s^2}{\chi_{1-\alpha^2,n-1}}}\right) &= \left(\sqrt{\frac{15 * 742.38}{27.488}}, \sqrt{\frac{15 * 742.38}{6.262}}\right) \\
+  \left(\sqrt{\frac{(n-1)s^2}{\chi^{2}_{1-\alpha/2,n-1}}},\sqrt{\frac{(n-1)s^2}{\chi^{2}_{\alpha/2,n-1}}}\right) &= \left(\sqrt{\frac{15 * 742.38}{27.488}}, \sqrt{\frac{15 * 742.38}{6.262}}\right) \\
                                                                                                           &= \left(20.13,42.17\right)\text{.}
 \end{align}
 
@@ -19,7 +19,7 @@ For the data, ${s^2 = 742.38}$.
 
 The first one-sided confidence interval is:
 \begin{align}
-  \sigma_0 &\leq \sqrt{\frac{(n-1)  s^2}{\chi_{1- \alpha,n-1}^{2}}} \\
+  \sigma_0 &\leq \sqrt{\frac{(n-1)  s^2}{\chi_{\alpha,n-1}^{2}}} \\
            &= \sqrt{\frac{15 * 742.38}{7.261}} \\
            &= 39.16 \text{,}
 \end{align}
@@ -28,7 +28,7 @@ making the interval~${(0, 39.16)}$.
 
 The second one-sided confidence interval is:
 \begin{align}
-  \sigma_0 &\geq \sqrt{\frac{(n-1)  s^2}{\chi_{\alpha,n-1}^{2}}} \\
+  \sigma_0 &\geq \sqrt{\frac{(n-1)  s^2}{\chi_{1-\alpha,n-1}^{2}}} \\
            &= \sqrt{\frac{15 * 742.38}{24.996}} \\
            &= 21.11 \text{,}
 \end{align}
